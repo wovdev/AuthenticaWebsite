@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authentica by Wov Labs | Digital Product Passport Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="announcement">
+      <div class="announcement__container">
+        <div class="announcement__scroll">
+          <div class="announcement__text">
+            <span data-i18n="announcementText">New: EU-compliant Digital Product Passport starter is live — see it in action.</span>
+            <a href="book-demo.html" data-i18n="navBookDemo">Book a Demo</a>
+          </div>
+          <div class="announcement__text" aria-hidden="true">
+            <span data-i18n="announcementText">New: EU-compliant Digital Product Passport starter is live — see it in action.</span>
+            <a href="book-demo.html" data-i18n="navBookDemo">Book a Demo</a>
+          </div>
+          <div class="announcement__text" aria-hidden="true">
+            <span data-i18n="announcementText">New: EU-compliant Digital Product Passport starter is live — see it in action.</span>
+            <a href="book-demo.html" data-i18n="navBookDemo">Book a Demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="nav">
+      <div class="nav__logo">
+        <img src="./logo.png" alt="AUTHENTICA.ID" class="nav__logo-img" />
+      </div>
+      <nav class="nav__links" id="nav-links">
+        <a href="#platform" data-i18n="navPlatform">Platform</a>
+        <div class="nav__item nav__item--has-sub">
+          <a href="#solutions" data-i18n="navSolutions">Solutions</a>
+          <div class="nav__sub">
+            <a href="brand-protection.html" data-i18n="navBrandProtection">Brand Protection</a>
+            <a href="eu-compliance.html" data-i18n="navEUCompliance">EU Compliance</a>
+            <a href="customer-engagement.html" data-i18n="navCustomerEngagement">Customer Engagement</a>
+          </div>
+        </div>
+        <a href="sectors.html" data-i18n="navSectors">Sectors</a>
+        <div class="nav__item nav__item--has-sub">
+          <a href="#resources" data-i18n="navResources">Resources</a>
+          <div class="nav__sub">
+            <a href="#dpp" data-i18n="navWhatIsDPP">What is a DPP?</a>
+            <a href="#data-carriers" data-i18n="navDataCarriers">Data Carriers</a>
+          </div>
+        </div>
+        <div class="nav__item nav__item--has-sub nav__lang">
+          <a href="#" class="nav__lang-btn" id="lang-switcher" aria-label="Language">
+            <span id="current-lang">EN</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+          <div class="nav__sub nav__lang-dropdown" id="lang-dropdown">
+            <a href="#" data-lang="en" class="nav__lang-option">English</a>
+            <a href="#" data-lang="it" class="nav__lang-option">Italiano</a>
+            <a href="#" data-lang="fr" class="nav__lang-option">Français</a>
+            <a href="#" data-lang="es" class="nav__lang-option">Español</a>
+          </div>
+        </div>
+        <a class="btn btn--header" href="book-demo.html" data-i18n="navBookDemo">Book a Demo</a>
+      </nav>
+      <button
+        class="nav__toggle"
+        id="nav-toggle"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero__content">
+          <h1 data-i18n="heroTitle">
+            AUTHENTICA.ID keeps every product trustworthy, traceable, and ready for circularity.
+          </h1>
+          <p class="hero__lead" data-i18n="heroSubtitle">
+            Launch compliant DPPs, capture lifecycle events, and turn ownership into engagement—
+            with privacy-first rails and plug-and-play tags.
+          </p>
+          <div class="hero__actions">
+            <a class="btn" href="book-demo.html" data-i18n="navBookDemo">Book a Demo</a>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <img src="./wovlabs_dump/images/INTRO.png" alt="AUTHENTICA.ID Platform" />
+        </div>
+      </section>
+
+      <section class="band band--muted unified-section" id="dpp">
+        <div class="unified-container">
+          <div class="unified-content">
+            <div class="unified-main">
+              <div class="unified-header">
+                <h2 data-i18n="dppTitle">What is a DPP and why is it important?</h2>
+                <p class="unified-lede" data-i18n="dppDescription">
+                  A DPP ties identity, compliance, and service data to each product. AUTHENTICA.ID
+                  makes it portable, secure, and simple to read/write across your ecosystem.
+                </p>
+              </div>
+              
+              <div class="unified-features">
+                <article class="unified-feature">
+                  <div class="unified-feature__icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                  </div>
+                  <div class="unified-feature__content">
+                    <h3 data-i18n="dppFeature1Title">Durable product identity</h3>
+                    <p data-i18n="dppFeature1Desc">Unique IDs anchored on-chain or off-chain with audit trails.</p>
+                  </div>
+                </article>
+                <article class="unified-feature">
+                  <div class="unified-feature__icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M9 11l3 3L22 4"/>
+                      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                    </svg>
+                  </div>
+                  <div class="unified-feature__content">
+                    <h3 data-i18n="dppFeature2Title">Compliance-ready structure</h3>
+                    <p data-i18n="dppFeature2Desc">Aligned to EU DPP guidance with exportable evidence packs.</p>
+                  </div>
+                </article>
+                <article class="unified-feature">
+                  <div class="unified-feature__icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                      <circle cx="9" cy="7" r="4"/>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                  </div>
+                  <div class="unified-feature__content">
+                    <h3 data-i18n="dppFeature3Title">Role-aware read & write</h3>
+                    <p data-i18n="dppFeature3Desc">Brands, retailers, service partners, and owners all get the right view.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            
+            <div class="unified-whitepaper">
+              <div class="unified-whitepaper__card">
+                <div class="unified-whitepaper__header">
+                  <span class="unified-whitepaper__badge" data-i18n="whitepaperBadge">EU Compliance</span>
+                  <h3 data-i18n="whitepaperTitle">Digital Product Passport: Textiles</h3>
+                </div>
+                <p class="unified-whitepaper__description" data-i18n="whitepaperDescription">
+                  Understand the latest requirements for the EU's Digital Product Passport legislation, along with practical information on how to efficiently comply.
+                </p>
+                
+                <div class="unified-whitepaper__keypoints">
+                  <div class="unified-keypoint">
+                    <span class="unified-keypoint__number">01</span>
+                    <span class="unified-keypoint__text" data-i18n="whitepaperKey1">Mandatory Data Requirements</span>
+                  </div>
+                  <div class="unified-keypoint">
+                    <span class="unified-keypoint__number">02</span>
+                    <span class="unified-keypoint__text" data-i18n="whitepaperKey2">QR Code Integration</span>
+                  </div>
+                  <div class="unified-keypoint">
+                    <span class="unified-keypoint__number">03</span>
+                    <span class="unified-keypoint__text" data-i18n="whitepaperKey3">Compliance Timeline</span>
+                  </div>
+                </div>
+                
+                <a href="eu-compliance.html" class="btn btn--unified" data-i18n="whitepaperDownload">
+                  Download whitepaper
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="unified-whitepaper__visual">
+                <div class="unified-document-stack">
+                  <div class="unified-document unified-document--1"></div>
+                  <div class="unified-document unified-document--2"></div>
+                  <div class="unified-document unified-document--3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="solutions">
+        <div class="band__header">
+          <h2 data-i18n="solutionsTitle">Built for protection, compliance, and engagement.</h2>
+        </div>
+        <div class="grid cards">
+          <a href="brand-protection.html" class="card card--link">
+            <h3 data-i18n="solutionBrandProtection">Brand Protection</h3>
+            <p data-i18n="solutionBrandProtectionDesc">
+              Secure identifiers and tamper-evident tags link physical products to digital truth.
+              Authenticity you can prove.
+            </p>
+            <div class="image-placeholder"></div>
+          </a>
+          <a href="eu-compliance.html" class="card card--link">
+            <h3 data-i18n="solutionEUCompliance">EU Compliance</h3>
+            <p data-i18n="solutionEUComplianceDesc">
+              Ready-to-use schemas, evidence exports, and consent-aware data sharing for EU markets.
+              DPP done right.
+            </p>
+            <div class="image-placeholder"></div>
+          </a>
+          <a href="customer-engagement.html" class="card card--link">
+            <h3 data-i18n="solutionCustomerEngagement">Customer Engagement</h3>
+            <p data-i18n="solutionCustomerEngagementDesc">
+              Turn every product into a service touchpoint with rewards, content, and programs.
+              Ownership as a channel.
+            </p>
+            <div class="image-placeholder"></div>
+          </a>
+        </div>
+      </section>
+
+      <section class="band band--muted" id="values">
+        <div class="band__header">
+          <h2 data-i18n="valuesTitle">Traceability, data you can use, and innovative marketing.</h2>
+        </div>
+        <div class="grid features">
+          <article class="feature">
+            <h3 data-i18n="value1Title">Traceability</h3>
+            <p data-i18n="value1Desc">End-to-end visibility. Manufacturing, service, resale, and recycling logged to one record.</p>
+          </article>
+          <article class="feature">
+            <h3 data-i18n="value2Title">Data Collection</h3>
+            <p data-i18n="value2Desc">Signal over noise. Capture only what matters—consent-based, exportable, ready for BI.</p>
+          </article>
+          <article class="feature">
+            <h3 data-i18n="value3Title">Innovative Marketing</h3>
+            <p data-i18n="value3Desc">Experiences from the product. Storytelling, benefits, and services delivered post-purchase.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="platform-section" id="platform">
+        <div class="platform">
+          <div class="platform__copy">
+            <h2 data-i18n="platformTitle">Wov Labs Business Platform</h2>
+            <p class="platform__subtitle" data-i18n="platformSubtitle">Your control center for Digital Product Passports.</p>
+            <p class="platform__description" data-i18n="platformDescription">
+              With our all-in-one platform, you can:
+            </p>
+            <ul class="list">
+              <li data-i18n="platformFeature1">Assign Smart Tags to physical products</li>
+              <li data-i18n="platformFeature2">Tailor DPPs with brand-aligned content and media</li>
+              <li data-i18n="platformFeature3">Issue verifiable certificates of ownership</li>
+              <li data-i18n="platformFeature4">Track interactions, campaigns, and compliance in real time</li>
+            </ul>
+            <div class="cta__actions">
+              <a class="btn btn--platform" href="book-demo.html" data-i18n="navBookDemo">Book a Demo</a>
+            </div>
+          </div>
+          <div class="platform__visual">
+            <img src="./wovlabs_dump/images/wov-labs__dashboard-selected-item-rebranded--laptop2.png" alt="Wov Labs Business Platform" />
+          </div>
+        </div>
+      </section>
+
+      <section class="band band--muted" id="integration">
+        <div class="band__header">
+          <h2>Plug and Play Tailored Integration</h2>
+          <p class="lede">
+            Works with your existing packaging, NFC/QR tags, and service flows. Loop videos with Tag integration or screenshot composition.
+          </p>
+        </div>
+        <div class="integration">
+          <div class="integration__item">
+            <div class="image-placeholder"></div>
+          </div>
+          <div class="integration__item">
+            <div class="image-placeholder"></div>
+          </div>
+          <div class="integration__item">
+            <div class="image-placeholder"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band band--muted" id="data-carriers">
+        <div class="band__header">
+          <h2 data-i18n="dataCarriersTitle">Data Carriers</h2>
+          <p class="lede" data-i18n="dataCarriersDescription">
+            Plug-and-play integration with NFC, QR codes, and other data carriers for seamless product identification.
+          </p>
+        </div>
+        <div class="grid cards">
+          <article class="card">
+            <h3 data-i18n="dataCarrier1Title">NFC Tags</h3>
+            <p data-i18n="dataCarrier1Desc">Secure near-field communication tags for instant product verification and engagement.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="dataCarrier2Title">QR Codes</h3>
+            <p data-i18n="dataCarrier2Desc">Universal QR code support for easy scanning and access to product information.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="dataCarrier3Title">Custom Integration</h3>
+            <p data-i18n="dataCarrier3Desc">Tailored solutions for your existing data carrier infrastructure.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="band" id="resources">
+        <div class="band__header">
+          <h2 data-i18n="resourcesTitle">News from Wov Labs</h2>
+        </div>
+        <div class="grid cards cards--news" id="medium-posts">
+          <div class="loading">Loading posts from Medium...</div>
+        </div>
+      </section>
+
+      <section class="band trusted" id="trusted">
+        <div class="band__header">
+          <h2 data-i18n="trustedTitle">Trusted by</h2>
+        </div>
+        <div class="trusted__container">
+          <div class="trusted__scroll">
+            <div class="trusted__logos">
+              <img src="./wovlabs_dump/images/logo__IB.png" alt="IB" onerror="console.error('Failed to load: logo__IB.png');" />
+              <img src="./wovlabs_dump/images/logo__a-few-pieces.png" alt="A Few Pieces" onerror="console.error('Failed to load: logo__a-few-pieces.png'); this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__bikeroom.jpg" alt="Bikeroom" onerror="console.error('Failed to load: logo__bikeroom.jpg'); this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__elitter.png" alt="Elitter" onerror="console.error('Failed to load: logo__elitter.png'); this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__empoli-fc.png" alt="Empoli FC" onerror="console.error('Failed to load: logo__empoli-fc.png'); this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__eth-milan.png" alt="ETH Milan" onerror="console.error('Failed to load: logo__eth-milan.png'); this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__eth-naples.png" alt="ETH Naples" onerror="console.error('Failed to load: logo__eth-naples.png'); this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__fattoria-dianella.png" alt="Fattoria Dianella" onerror="console.error('Failed to load: logo__fattoria-dianella.png'); this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__federitaly.png" alt="Federitaly" onerror="console.error('Failed to load: logo__federitaly.png'); this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__gforever.png" alt="G Forever" onerror="console.error('Failed to load: logo__gforever.png'); this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__kilesa.png" alt="Kilesa" onerror="console.error('Failed to load: logo__kilesa.png'); this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__lubellofirenze.png" alt="Lubello Firenze" onerror="console.error('Failed to load: logo__lubellofirenze.png'); this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__maison-beast.png" alt="Maison Beast" onerror="console.error('Failed to load: logo__maison-beast.png'); this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__maison-rags.png" alt="Maison Rags" onerror="console.error('Failed to load: logo__maison-rags.png'); this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__napul.eth.png" alt="NapulETH" onerror="console.error('Failed to load: logo__napul.eth.png'); this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__novak.png" alt="Novak" onerror="console.error('Failed to load: logo__novak.png'); this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__varani.png" alt="Varani" onerror="console.error('Failed to load: logo__varani.png'); this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__vechain.png" alt="VeChain" onerror="console.error('Failed to load: logo__vechain.png'); this.style.display='none';" />
+            </div>
+            <div class="trusted__logos" aria-hidden="true">
+              <img src="./wovlabs_dump/images/logo__IB.png" alt="IB" />
+              <img src="./wovlabs_dump/images/logo__a-few-pieces.png" alt="A Few Pieces" onerror="this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__bikeroom.jpg" alt="Bikeroom" onerror="this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__elitter.png" alt="Elitter" onerror="this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__empoli-fc.png" alt="Empoli FC" onerror="this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__eth-milan.png" alt="ETH Milan" onerror="this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__eth-naples.png" alt="ETH Naples" onerror="this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__fattoria-dianella.png" alt="Fattoria Dianella" onerror="this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__federitaly.png" alt="Federitaly" onerror="this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__gforever.png" alt="G Forever" onerror="this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__kilesa.png" alt="Kilesa" onerror="this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__lubellofirenze.png" alt="Lubello Firenze" onerror="this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__maison-beast.png" alt="Maison Beast" onerror="this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__maison-rags.png" alt="Maison Rags" onerror="this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__napul.eth.png" alt="NapulETH" onerror="this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__novak.png" alt="Novak" onerror="this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__varani.png" alt="Varani" onerror="this.style.display='none';" />
+              <img src="./wovlabs_dump/images/logo__vechain.png" alt="VeChain" onerror="this.style.display='none';" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band band--muted cta" id="demo">
+        <div class="cta__content">
+          <div class="cta__text">
+            <h2 data-i18n="ctaTitle">Book a Demo</h2>
+            <p data-i18n="ctaDescription">See AUTHENTICA.ID live for your products. We tailor onboarding by category and region.</p>
+          </div>
+          <a class="btn btn--cta" href="book-demo.html" data-i18n="navBookDemo">Book a Demo</a>
+        </div>
+      </section>
+    </main>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+
+    <footer class="footer">
+      <div class="footer__brand">
+        <div class="nav__logo">AUTHENTICA.ID<span> by Wov Labs</span></div>
+        <p>Digital Product Passports that keep products trustworthy and compliant.</p>
+        <div class="footer__social">
+          <a href="https://www.linkedin.com/company/wovlabs/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+          <a href="https://x.com/wovlabs_com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/wovlabs/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__links">
+        <div>
+          <p class="eyebrow" data-i18n="footerExplore">Explore</p>
+          <a href="#platform" data-i18n="navPlatform">Platform</a>
+          <a href="#solutions" data-i18n="navSolutions">Solutions</a>
+          <a href="sectors.html" data-i18n="navSectors">Sectors</a>
+        </div>
+        <div>
+          <p class="eyebrow" data-i18n="footerLearn">Learn</p>
+          <a href="#dpp" data-i18n="navWhatIsDPP">What is a DPP?</a>
+          <a href="#data-carriers" data-i18n="navDataCarriers">Data Carriers</a>
+          <a href="#resources" data-i18n="navResources">Resources</a>
+        </div>
+        <div>
+          <p class="eyebrow" data-i18n="footerContact">Contact</p>
+          <a href="mailto:info@wovlabs.com">info@wovlabs.com</a>
+          <a href="book-demo.html" data-i18n="navBookDemo">Book a Demo</a>
+          <a href="https://app.wovlabs.com/" target="_blank" rel="noopener noreferrer" data-i18n="launchApp">Launch App</a>
+        </div>
+        <div class="footer__newsletter">
+          <p class="eyebrow" data-i18n="footerNewsletter">Newsletter</p>
+          <p class="footer__newsletter-desc" data-i18n="footerNewsletterDesc">Stay updated with the latest news and updates.</p>
+          <form class="footer__newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+            <input type="email" data-i18n-placeholder="footerNewsletterPlaceholder" placeholder="Your email" required class="footer__newsletter-input" />
+            <button type="submit" class="btn btn--small" data-i18n="footerSubscribe">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <p>&copy; <span id="copyright-year">2025</span> WoV Labs. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent">
+      <div class="cookie-banner__content">
+        <div class="cookie-banner__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="8" cy="10" r="1.5" fill="currentColor"/>
+            <circle cx="12" cy="8" r="1.5" fill="currentColor"/>
+            <circle cx="16" cy="10" r="1.5" fill="currentColor"/>
+            <circle cx="10" cy="14" r="1.5" fill="currentColor"/>
+            <circle cx="14" cy="14" r="1.5" fill="currentColor"/>
+            <path d="M12 18c-2 0-4-1-4-3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="cookie-banner__text">
+          <p class="cookie-banner__title" data-i18n="cookieTitle">We use cookies to enhance your experience</p>
+          <p class="cookie-banner__description" data-i18n="cookieDescription">We use cookies and similar technologies to help personalize content, tailor and measure ads, and provide a better experience. By clicking accept, you agree to our use of cookies.</p>
+        </div>
+        <div class="cookie-banner__actions">
+          <button class="btn btn--cookie-secondary" id="cookie-customize" data-i18n="cookieCustomize">Customize</button>
+          <button class="btn btn--cookie-primary" id="cookie-accept-all" data-i18n="cookieAcceptAll">Accept All</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cookie Preferences Modal -->
+    <div class="cookie-modal" id="cookie-modal" role="dialog" aria-labelledby="cookie-modal-title" aria-hidden="true">
+      <div class="cookie-modal__overlay"></div>
+      <div class="cookie-modal__content">
+        <div class="cookie-modal__header">
+          <h2 class="cookie-modal__title" id="cookie-modal-title" data-i18n="cookieModalTitle">Customize your preferences</h2>
+          <button class="cookie-modal__close" id="cookie-modal-close" aria-label="Close">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"/>
+              <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+        <div class="cookie-modal__body">
+          <div class="cookie-category">
+            <div class="cookie-category__header">
+              <div class="cookie-category__info">
+                <h3 class="cookie-category__title" data-i18n="cookieEssentialTitle">Essential</h3>
+                <span class="cookie-category__badge" data-i18n="cookieRequired">Required</span>
+              </div>
+            </div>
+            <p class="cookie-category__description" data-i18n="cookieEssentialDesc">These items are required to enable basic website functionality.</p>
+          </div>
+          
+          <div class="cookie-category">
+            <div class="cookie-category__header">
+              <div class="cookie-category__info">
+                <h3 class="cookie-category__title" data-i18n="cookieAnalyticsTitle">Analytics</h3>
+                <label class="cookie-toggle">
+                  <input type="checkbox" id="cookie-analytics" checked>
+                  <span class="cookie-toggle__slider"></span>
+                </label>
+              </div>
+            </div>
+            <p class="cookie-category__description" data-i18n="cookieAnalyticsDesc">These items help the website operator understand how its website performs, how visitors interact with the site, and whether there may be technical issues.</p>
+          </div>
+          
+          <div class="cookie-category">
+            <div class="cookie-category__header">
+              <div class="cookie-category__info">
+                <h3 class="cookie-category__title" data-i18n="cookieMarketingTitle">Marketing</h3>
+                <label class="cookie-toggle">
+                  <input type="checkbox" id="cookie-marketing" checked>
+                  <span class="cookie-toggle__slider"></span>
+                </label>
+              </div>
+            </div>
+            <p class="cookie-category__description" data-i18n="cookieMarketingDesc">These items are used to deliver advertising that is more relevant to you and your interests.</p>
+          </div>
+          
+          <div class="cookie-category">
+            <div class="cookie-category__header">
+              <div class="cookie-category__info">
+                <h3 class="cookie-category__title" data-i18n="cookiePersonalizationTitle">Personalization</h3>
+                <label class="cookie-toggle">
+                  <input type="checkbox" id="cookie-personalization" checked>
+                  <span class="cookie-toggle__slider"></span>
+                </label>
+              </div>
+            </div>
+            <p class="cookie-category__description" data-i18n="cookiePersonalizationDesc">These items allow the website to remember choices you make (such as your user name, language, or the region you are in) and provide enhanced, more personal features.</p>
+          </div>
+        </div>
+        <div class="cookie-modal__footer">
+          <button class="btn btn--cookie-remove" id="cookie-remove-all" data-i18n="cookieRemoveAll">Remove all cookies</button>
+          <button class="btn btn--cookie-save" id="cookie-save" data-i18n="cookieSave">Save and submit</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./translations.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

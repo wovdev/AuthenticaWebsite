@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 50" preserveAspectRatio="xMidYMid meet">
+  <!-- AUTHENTICA.ID Text - italicized/slanted upwards to the right -->
+  <text x="0" y="28" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" transform="skewX(-10)" letter-spacing="0.3px">
+    AUTHENTICA.ID
+  </text>
+  
+  <!-- Checkmark/Swoosh Graphic - centered horizontally below text -->
+  <!-- Thicker light blue curved line starting from bottom left, sweeping up and right -->
+  <path d="M 25 42 Q 45 38, 65 34 Q 85 30, 100 28 Q 110 26.5, 118 25.5" 
+        stroke="#60a5fa" 
+        stroke-width="4.5" 
+        fill="none" 
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+  
+  <!-- Thinner white curved line overlapping and extending further right -->
+  <path d="M 25 42 Q 45 38, 65 34 Q 85 30, 100 28 Q 110 26.5, 118 25.5 Q 130 24, 142 22.5 Q 154 21, 166 19.5 Q 178 18, 190 16.5" 
+        stroke="#ffffff" 
+        stroke-width="2" 
+        fill="none" 
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+</svg>
