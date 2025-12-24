@@ -3716,7 +3716,7 @@ main {
 }
 
 .business-platform__container {
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 0 40px;
   position: relative;
@@ -3746,7 +3746,7 @@ main {
   display: flex;
   align-items: center; /* Vertically center columns relative to laptop */
   justify-content: center;
-  gap: 50px; /* Bring cards slightly closer for tighter alignment */
+  gap: 40px; /* Slightly reduced gap to help with screen fit */
   margin-bottom: 80px;
 }
 
@@ -3755,11 +3755,13 @@ main {
   display: flex;
   flex-direction: column;
   gap: 30px; /* Balanced gap between boxes */
-  max-width: 480px; /* Wide rectangular look */
+  max-width: 510px; /* 15% smaller: 600px * 0.85 = 510px */
+  min-width: 425px; /* 15% smaller: 500px * 0.85 = 425px */
 }
 
 .business-platform__visual {
-  flex: 3;
+  flex: 0 0 700px; /* Fixed width to prevent shrinking */
+  min-width: 700px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -3787,11 +3789,13 @@ main {
 .business-platform__laptop {
   width: 100%;
   max-width: 1122px;
+  min-width: 700px;
   height: auto;
   position: relative;
   z-index: 3;
   display: block;
   filter: drop-shadow(0 0 25px rgba(0, 0, 0, 0.5));
+  transform: scale(1.1); /* Increase laptop size by 10% */
 }
 
 .business-feature {
@@ -3799,16 +3803,18 @@ main {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
-  padding: 30px 40px;
+  padding: 28px 36px;
   transition: all 0.3s ease;
   position: relative;
   z-index: 4;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 150px; /* Fixed height for uniform box size */
+  align-items: center;
+  text-align: center;
+  aspect-ratio: 2 / 1; /* Horizontally squared - twice as wide as tall */
   width: 100%;
-  text-align: left;
+  min-height: 140px;
 }
 
 .business-feature:hover {
@@ -3818,11 +3824,38 @@ main {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
+.business-feature__icon {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.business-feature__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(1.5) contrast(1.1);
+  opacity: 1;
+}
+
+.business-feature__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
 .business-feature h3 {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 8px;
   color: #fff;
+  text-align: center;
 }
 
 .business-feature p {
@@ -3830,6 +3863,7 @@ main {
   color: var(--text-subtle);
   line-height: 1.5;
   margin: 0;
+  text-align: center;
 }
 
 .business-platform__footer {
