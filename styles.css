@@ -585,25 +585,9 @@ main {
   position: absolute;
   left: 0;
   right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, 
-    transparent 0%,
-    rgba(59, 130, 246, 0.8) 10%,
-    rgba(96, 165, 250, 1) 20%,
-    rgba(147, 197, 253, 1) 30%,
-    rgba(96, 165, 250, 1) 40%,
-    rgba(59, 130, 246, 0.8) 50%,
-    rgba(96, 165, 250, 1) 60%,
-    rgba(147, 197, 253, 1) 70%,
-    rgba(96, 165, 250, 1) 80%,
-    rgba(59, 130, 246, 0.8) 90%,
-    transparent 100%
-  );
-  box-shadow: 
-    0 0 20px rgba(59, 130, 246, 0.8),
-    0 0 40px rgba(96, 165, 250, 0.6),
-    0 0 60px rgba(147, 197, 253, 0.4);
-  animation: glow-pulse 3s ease-in-out infinite;
+  height: 1px;
+  background: rgba(96, 165, 250, 0.5);
+  z-index: 2;
 }
 
 .divider-band__glow-bar--top {
@@ -647,6 +631,26 @@ main {
   text-transform: none;
   color: #ffffff;
   margin: 0 0 40px;
+}
+
+.divider-band__subtitle {
+  font-size: clamp(16px, 1.8vw, 20px);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: normal;
+  text-transform: none;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.divider-band__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
 }
 
 .divider-band__items {
@@ -711,6 +715,10 @@ main {
   .divider-band__title {
     font-size: 14px;
     letter-spacing: 0.16em;
+  }
+  .divider-band__subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
   }
   .divider-band__items {
     gap: 12px;
@@ -798,9 +806,14 @@ main {
 
 /* Unified DPP & Whitepaper Section */
 /* DPP Section - New Design */
-.dpp-section {
+.dpp-section,
+.band.dpp-section,
+.band--muted.dpp-section {
   padding: 80px 2.5%;
   background: transparent;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0;
 }
 
 .dpp-container {
@@ -3729,17 +3742,21 @@ main {
 }
 
 .business-platform__header h2 {
-  font-size: 56px;
+  font-size: clamp(44px, 5.5vw, 62px);
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   color: #fff;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 .business-platform__subtitle {
-  font-size: 22px;
-  color: var(--text-subtle);
+  font-size: 24px;
+  color: var(--accent-light);
   max-width: 800px;
   margin: 0 auto;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 .business-platform__content {
@@ -3784,6 +3801,7 @@ main {
   pointer-events: none;
   -webkit-mask-image: radial-gradient(circle, black 30%, transparent 70%);
   mask-image: radial-gradient(circle, black 30%, transparent 70%);
+  filter: brightness(1.4) drop-shadow(0 0 40px rgba(96, 165, 250, 0.6)) drop-shadow(0 0 80px rgba(96, 165, 250, 0.4)) drop-shadow(0 0 120px rgba(96, 165, 250, 0.3));
 }
 
 .business-platform__laptop {
@@ -3803,7 +3821,7 @@ main {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
-  padding: 28px 36px;
+  padding: 24px 32px;
   transition: all 0.3s ease;
   position: relative;
   z-index: 4;
@@ -3825,21 +3843,26 @@ main {
 }
 
 .business-feature__icon {
-  width: 96px;
-  height: 96px;
-  margin-bottom: 20px;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 0px !important; /* Temporary: set to 0 to verify CSS is loading */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
+.business-feature__text {
+  margin-top: 0;
+}
+
 .business-feature__icon img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: brightness(1.5) contrast(1.1);
+  filter: brightness(1.5) contrast(1.4);
   opacity: 1;
+  image-rendering: auto;
 }
 
 .business-feature__text {
@@ -3853,6 +3876,7 @@ main {
 .business-feature h3 {
   font-size: 22px;
   font-weight: 600;
+  margin-top: 0;
   margin-bottom: 8px;
   color: #fff;
   text-align: center;
