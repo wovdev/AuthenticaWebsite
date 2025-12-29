@@ -109,21 +109,122 @@ async function loadMediumPosts() {
         }
         
         article.innerHTML = `
-          ${thumbnail ? `<img src="${thumbnail}" alt="${title}" class="news-thumbnail" onerror="this.style.display='none';" />` : '<div class="news-thumbnail"></div>'}
-          <div style="display: flex; align-items: center; justify-content: flex-end; margin-bottom: 12px;">
+          ${thumbnail ? `<img src="${thumbnail}" alt="${title}" class="news-thumbnail" draggable="false" onerror="this.style.display='none';" />` : '<div class="news-thumbnail"></div>'}
+          <div style="display: flex; align-items: center; justify-content: flex-end;">
             ${formattedDate ? `<div class="news-card__date">${formattedDate}</div>` : ''}
           </div>
           <h3>${title}</h3>
           ${description ? `<p>${description}</p>` : ''}
         `;
         
-        // Make the card clickable
+        // Prevent image dragging
+        const img = article.querySelector('img');
+        if (img) {
+          img.addEventListener('dragstart', (e) => {
+            e.preventDefault();
+            return false;
+          });
+        }
+        
+        // Make the card clickable (only if not dragging)
         article.style.cursor = 'pointer';
-        article.addEventListener('click', () => {
-          window.open(link, '_blank', 'noopener,noreferrer');
+        article.addEventListener('click', (e) => {
+          const container = e.target.closest('.cards--news');
+          // Only open link if it wasn't a drag
+          if (!container?.dataset.isDragging && !container?.dataset.preventClick) {
+            window.open(link, '_blank', 'noopener,noreferrer');
+          }
         });
         
         postsContainer.appendChild(article);
+      });
+      
+      // Add drag functionality to the container with improved UX
+      let isDragging = false;
+      let hasDragged = false;
+      let startX = 0;
+      let scrollLeft = 0;
+      
+      postsContainer.addEventListener('mousedown', (e) => {
+        // Allow dragging even if starting on an image
+        isDragging = true;
+        hasDragged = false;
+        startX = e.pageX - postsContainer.offsetLeft;
+        scrollLeft = postsContainer.scrollLeft;
+        postsContainer.style.cursor = 'grabbing';
+        postsContainer.dataset.isDragging = 'true';
+        // Prevent image drag
+        if (e.target.tagName === 'IMG') {
+          e.preventDefault();
+        }
+      });
+      
+      postsContainer.addEventListener('mouseleave', () => {
+        isDragging = false;
+        hasDragged = false;
+        delete postsContainer.dataset.isDragging;
+        postsContainer.style.cursor = 'grab';
+      });
+      
+      postsContainer.addEventListener('mouseup', () => {
+        const wasDragging = hasDragged;
+        isDragging = false;
+        hasDragged = false;
+        delete postsContainer.dataset.isDragging;
+        postsContainer.style.cursor = 'grab';
+        
+        // Prevent click if there was a drag
+        if (wasDragging) {
+          postsContainer.dataset.preventClick = 'true';
+          setTimeout(() => {
+            delete postsContainer.dataset.preventClick;
+          }, 100);
+        }
+      });
+      
+      postsContainer.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        const x = e.pageX - postsContainer.offsetLeft;
+        const walk = x - startX;
+        
+        // Only mark as dragged if there's actual movement
+        if (Math.abs(walk) > 3) {
+          hasDragged = true;
+          e.preventDefault();
+          postsContainer.scrollLeft = scrollLeft - walk;
+        }
+      });
+      
+      // Touch events for mobile
+      let touchStartX = 0;
+      let touchScrollLeft = 0;
+      let touchHasDragged = false;
+      
+      postsContainer.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].pageX;
+        touchScrollLeft = postsContainer.scrollLeft;
+        touchHasDragged = false;
+        postsContainer.dataset.isDragging = 'true';
+      }, { passive: true });
+      
+      postsContainer.addEventListener('touchmove', (e) => {
+        const touchX = e.touches[0].pageX;
+        const walk = touchX - touchStartX;
+        if (Math.abs(walk) > 3) {
+          touchHasDragged = true;
+          postsContainer.scrollLeft = touchScrollLeft - walk;
+        }
+      }, { passive: true });
+      
+      postsContainer.addEventListener('touchend', () => {
+        if (touchHasDragged) {
+          postsContainer.dataset.preventClick = 'true';
+          setTimeout(() => {
+            delete postsContainer.dataset.preventClick;
+          }, 100);
+        }
+        touchHasDragged = false;
+        delete postsContainer.dataset.isDragging;
       });
       
       console.log('✓ All posts rendered successfully');
