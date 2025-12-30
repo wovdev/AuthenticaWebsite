@@ -161,7 +161,7 @@ main {
 }
 
 main > .secure-network-hero {
-  margin: -60px calc(50% - 50vw) -125px calc(50% - 50vw) !important;
+  margin: -60px calc(50% - 50vw) 0 calc(50% - 50vw) !important;
   width: 100vw !important;
   max-width: 100vw !important;
   position: relative;
@@ -2347,7 +2347,7 @@ main > .secure-network-hero + .band--no-frame {
   position: relative;
   height: 85vh;
   min-height: 600px;
-  background: #06133B url('./wovlabs_dump/images/backhero3.jpeg') center center / cover no-repeat;
+  background: #06133B url('./wovlabs_dump/images/backhero9.png') center center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2360,18 +2360,6 @@ main > .secure-network-hero + .band--no-frame {
   border-radius: 0 !important;
   outline: none !important;
   padding: 0;
-}
-
-.secure-network-hero::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(6, 19, 59, 0.65);
-  z-index: 0;
-  pointer-events: none;
 }
 
 
@@ -2549,36 +2537,53 @@ main > .secure-network-hero + .band--no-frame {
 }
 
 .band--no-frame {
-  background: #ffffff !important;
+  background: 
+    radial-gradient(ellipse 1200px 1000px at 92% 20%, rgba(37, 99, 235, 0.22) 0%, transparent 70%),
+    radial-gradient(ellipse 1100px 900px at 96% 50%, rgba(37, 99, 235, 0.25) 0%, transparent 70%),
+    radial-gradient(ellipse 1000px 800px at 94% 80%, rgba(37, 99, 235, 0.20) 0%, transparent 70%),
+    radial-gradient(ellipse 1400px 1200px at 70% 50%, rgba(37, 99, 235, 0.08) 0%, transparent 60%),
+    #ffffff !important;
   border: none !important;
   box-shadow: none !important;
   border-radius: 0 !important;
-  padding: 60px 20% !important;
+  padding: 120px 20% 100px !important;
   color: #000000 !important;
   width: 100vw !important;
   margin-left: calc(50% - 50vw) !important;
   margin-right: calc(50% - 50vw) !important;
   margin-top: 0 !important;
-  margin-top: 0 !important;
+  min-height: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.features-section-title {
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: normal;
+  margin: 80px 0 100px;
+  color: #2d3748 !important;
+  text-align: center;
 }
 
 .band--no-frame h2 {
   font-size: clamp(44px, 5.5vw, 62px);
   line-height: 1.1;
   letter-spacing: -0.02em;
-  margin: 0 0 12px;
+  margin: 0 0 80px;
   font-weight: 700;
-  color: #000000 !important;
+  color: #2d3748 !important;
   text-align: center;
 }
 
 .band--no-frame h3,
 .band--no-frame h4 {
-  color: #000000 !important;
+  color: #2d3748 !important;
 }
 
 .band--no-frame p {
-  color: #000000 !important;
+  color: #4a5568 !important;
 }
 
 .band--no-frame a {
@@ -2589,7 +2594,7 @@ main > .secure-network-hero + .band--no-frame {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  margin-top: 60px;
+  margin-top: 0;
   max-width: 100%;
   width: 100%;
   margin-left: 0;
@@ -2607,7 +2612,7 @@ main > .secure-network-hero + .band--no-frame {
   line-height: 1.2;
   letter-spacing: normal;
   margin-bottom: 12px;
-  color: #000000 !important;
+  color: #2d3748 !important;
 }
 
 .feature-item p {
@@ -2615,7 +2620,7 @@ main > .secure-network-hero + .band--no-frame {
   font-weight: 400;
   line-height: 1.6;
   letter-spacing: normal;
-  color: #000000 !important;
+  color: #4a5568 !important;
   margin: 0;
 }
 
