@@ -3826,7 +3826,7 @@ main {
   display: flex;
   align-items: center; /* Vertically center columns relative to laptop */
   justify-content: center;
-  gap: 40px; /* Slightly reduced gap to help with screen fit */
+  gap: 55px;
   margin-bottom: 80px;
 }
 
@@ -3837,6 +3837,14 @@ main {
   gap: 30px; /* Balanced gap between boxes */
   max-width: 450px;
   min-width: 380px;
+}
+
+.business-platform__side--left {
+  align-items: flex-end;
+}
+
+.business-platform__side--right {
+  align-items: flex-start;
 }
 
 .business-platform__visual {
@@ -3876,14 +3884,18 @@ main {
   z-index: 3;
   display: block;
   filter: drop-shadow(0 0 25px rgba(0, 0, 0, 0.5));
-  transform: scale(1.1); /* Increase laptop size by 10% */
+  transform: scale(1.155); /* Increase laptop size by 15.5% (5% increase from previous 1.1) */
 }
 
 .business-feature {
-  background: rgba(255, 255, 255, 0.03); /* Lighter, more transparent background */
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
+  background: transparent;
+  border: 1px solid rgba(96, 165, 250, 0.5);
+  border-radius: var(--radius-lg);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(59, 130, 246, 0.3),
+    0 0 40px rgba(59, 130, 246, 0.15),
+    0 0 80px rgba(37, 99, 235, 0.1);
   padding: 24px 20px 24px 20px;
   transition: all 0.3s ease;
   position: relative;
@@ -3893,16 +3905,19 @@ main {
   justify-content: flex-start;
   align-items: flex-start;
   text-align: left;
-  aspect-ratio: 2 / 1; /* Horizontally squared - twice as wide as tall */
-  width: 100%;
+  width: 80%;
   min-height: 140px;
 }
 
 .business-feature:hover {
-  background: rgba(255, 255, 255, 0.07);
-  border-color: var(--accent);
+  background: transparent;
+  border-color: rgba(96, 165, 250, 0.5);
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(59, 130, 246, 0.3),
+    0 0 40px rgba(59, 130, 246, 0.15),
+    0 0 80px rgba(37, 99, 235, 0.1);
 }
 
 .business-feature__icon {
@@ -3919,7 +3934,7 @@ main {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: brightness(1.5) contrast(1.4);
+  filter: brightness(0) saturate(100%) invert(34%) sepia(56%) saturate(2259%) hue-rotate(196deg) brightness(101%) contrast(105%);
   opacity: 1;
   image-rendering: auto;
 }
