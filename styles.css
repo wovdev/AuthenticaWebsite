@@ -2567,8 +2567,9 @@ main > .secure-network-hero + .band--no-frame {
   text-align: center;
 }
 
-.band--no-frame h2 {
-  font-size: clamp(44px, 5.5vw, 62px);
+.band--no-frame h2,
+.band--no-frame .page-content h2 {
+  font-size: clamp(37px, 4.6vw, 52px) !important;
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin: 0 0 80px;
