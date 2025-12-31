@@ -879,6 +879,16 @@ main > .secure-network-hero + .band--no-frame {
   background: rgba(37, 99, 235, 0.3);
 }
 
+.band--muted.cta,
+.band.cta,
+.cta.band {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  outline: none !important;
+}
+
 /* Unified DPP & Whitepaper Section */
 /* DPP Section - New Design */
 .dpp-section,
@@ -2287,45 +2297,92 @@ main > .secure-network-hero + .band--no-frame {
 }
 
 .cta {
-  padding: 60px 3% !important;
+  padding: 100px 3% !important;
+  background: transparent !important;
+  position: relative;
+  overflow: hidden;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  outline: none !important;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse 800px 600px at 50% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cta::after {
+  display: none;
 }
 
 .cta__content {
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+  text-align: center;
+  gap: 28px;
+  position: relative;
+  z-index: 1;
 }
 
 .cta__text {
   flex: 1;
+  max-width: 100%;
 }
 
 .cta__text h2 {
-  font-size: clamp(28px, 3vw, 36px);
+  font-size: clamp(36px, 4.5vw, 52px);
   font-weight: 700;
-  margin: 0 0 12px;
+  margin: 0 0 16px;
   line-height: 1.2;
-  color: var(--text);
+  color: #ffffff;
   letter-spacing: -0.02em;
 }
 
 .cta__text p {
-  font-size: 16px;
+  font-size: clamp(16px, 1.9vw, 20px);
   line-height: 1.6;
-  color: var(--text-subtle);
+  color: rgba(255, 255, 255, 0.85);
   margin: 0;
-  max-width: 500px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 400;
 }
 
 .btn--cta {
-  flex-shrink: 0;
-  padding: 16px 32px;
-  font-size: 16px;
-  font-weight: 600;
+  background: var(--accent);
+  color: #ffffff;
+  border: none;
+  box-shadow: none;
+  border-radius: 10px;
+  font-weight: 700;
+  padding: 10px 24px;
+  font-size: 18px;
+  transition: background 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
   white-space: nowrap;
+}
+
+.btn--cta:hover {
+  background: var(--accent-strong);
+  color: #ffffff;
+  transform: none;
 }
 
 .cta__actions {
