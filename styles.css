@@ -2689,7 +2689,7 @@ main > .secure-network-hero + .band--no-frame {
 .features-grid-2x2 {
   display: grid !important;
   grid-template-columns: repeat(2, 1fr) !important;
-  gap: 40px 180px !important;
+  gap: 80px 180px !important;
   margin: 80px auto 0 !important;
   max-width: 95vw !important;
   width: 95vw !important;
