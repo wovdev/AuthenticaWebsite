@@ -2607,6 +2607,29 @@ main > .secure-network-hero + .band--no-frame {
   z-index: 2;
 }
 
+/* Force remove all spacing and borders between consecutive sections - remove blue divider */
+.band--no-frame + .band--no-frame {
+  margin-top: -125px !important;
+  padding-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  background: #f8f9fa !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+
+/* Override any band styling that might create blue dividers */
+.band--no-frame {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
 .band--no-frame .page-content {
   max-width: 1280px !important;
   margin: 0 auto !important;
