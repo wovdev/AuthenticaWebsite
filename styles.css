@@ -579,7 +579,8 @@ main > .secure-network-hero + .band--no-frame {
   gap: 60px;
   margin-top: 0; /* remove bar/gap between nav and hero */
   margin-bottom: 34px;
-  padding: 40px 2% 0;
+  padding: 56px 2% 56px; /* match brand-protection hero sizing */
+  min-height: 84vh; /* match brand-protection hero height */
   position: relative;
 }
 
