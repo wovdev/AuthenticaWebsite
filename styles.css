@@ -1972,6 +1972,15 @@ main > .secure-network-hero + .band--no-frame {
   box-shadow: none;
 }
 
+/* Fix: ensure the “HOW IT WORKS” accent above “Your Path to a Connected Product”
+   isn’t hidden by the section overlap on desktop. */
+@media (min-width: 769px) {
+  #digital-twin.platform-section {
+    margin-top: 0 !important;
+    padding-top: 110px !important;
+  }
+}
+
 .platform {
   display: grid;
   grid-template-columns: minmax(0, 0.5fr) minmax(0, 1.5fr);
