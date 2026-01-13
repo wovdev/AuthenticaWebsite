@@ -200,6 +200,16 @@ main > #solutions-2 {
   isolation: isolate;
 }
 
+/* Book Demo CTA: full-bleed section (but keep inner content centered) */
+main > #bookdemo.cta {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 #solutions-2::before {
   display: none;
 }
@@ -2701,7 +2711,7 @@ main > .secure-network-hero + .band--no-frame {
 }
 
 .cta__text p {
-  font-size: clamp(16px, 1.9vw, 20px);
+  font-size: clamp(18px, 2.2vw, 26px); /* match Use Cases subtitle */
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.85);
   margin: 0;
@@ -2740,6 +2750,88 @@ main > .secure-network-hero + .band--no-frame {
   gap: 10px;
   flex-wrap: wrap;
   justify-content: flex-end;
+}
+
+/* Bottom CTA Banner */
+.cta-banner {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 100px 2.5% 120px;
+  background: linear-gradient(180deg, #020713 0%, #06133B 100%);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 700px 500px at 50% 30%, rgba(0, 229, 255, 0.15), transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.cta-banner__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-banner__eyebrow {
+  color: #00E5FF;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: clamp(14px, 1.6vw, 16px);
+}
+
+.cta-banner__title {
+  color: #ffffff;
+  font-size: clamp(38px, 4.8vw, 58px);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.cta-banner__subtitle {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: clamp(18px, 2.2vw, 24px);
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.cta-banner__actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.cta-banner .btn {
+  min-width: 180px;
+  padding: 16px 28px;
+  font-size: clamp(16px, 1.8vw, 20px);
+  border-radius: 14px;
+}
+
+.cta-banner .btn.btn--secondary {
+  background: transparent;
+  border: 2px solid #00E5FF;
+  color: #00E5FF;
+}
+
+.cta-banner .btn.btn--secondary:hover {
+  background: rgba(0, 229, 255, 0.08);
 }
 
 .card--link {
@@ -4778,7 +4870,7 @@ main > .secure-network-hero + .band--no-frame {
 .use-cases-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 48px; /* add breathing room between the three cards */
   margin-top: 60px;
 }
 
