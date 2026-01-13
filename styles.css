@@ -4003,21 +4003,32 @@ main > .secure-network-hero + .band--no-frame {
 }
 
 .footer {
-  max-width: var(--max-width);
-  margin: 50px auto 0;
-  padding: 40px 2.5% 28px;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background: #020713;
+  padding: 80px 40px 40px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
   gap: 40px;
   color: var(--text-subtle);
   font-size: clamp(16px, 1.8vw, 22px);
-  border-top: 1px solid var(--border);
+  border-top: none;
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
 }
 
 @media (max-width: 768px) {
   .footer {
     grid-template-columns: 1fr;
     gap: 32px;
+    padding: 40px 20px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    max-width: 100%;
   }
 
   .whitepaper-section {
@@ -4779,7 +4790,7 @@ main > .secure-network-hero + .band--no-frame {
 
 
 .use-case-card {
-  background: #111827 !important; /* Deeper dark blue/grey from image */
+  background: #081021 !important; /* Match brand protection card color */
   border-radius: 24px;
   overflow: hidden;
   display: flex;
@@ -4787,12 +4798,32 @@ main > .secure-network-hero + .band--no-frame {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.05);
   padding: 24px; /* Padding around the whole card interior */
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative; /* For the ::before gradient */
+}
+
+.use-case-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 20%, rgba(0, 229, 255, 0.07), transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.use-case-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .use-case-card:hover {
-  transform: translateY(-5px);
+  background: #0a152d !important; /* Match brand protection card hover color */
+  transform: translateY(-8px);
   border-color: rgba(0, 229, 255, 0.3);
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.2);
 }
 
 .use-case-card__visual {
@@ -5010,9 +5041,10 @@ main > .secure-network-hero + .band--no-frame {
   text-align: left;
   text-decoration: none;
   transition: all 0.3s ease;
-  height: 100%;
+  width: 440px; /* Force same width as Smart Tagging */
+  height: 320px; /* Force same height as Smart Tagging */
+  flex-shrink: 0;
   box-shadow: 0 20px 80px rgba(0, 0, 0, 0.15);
-  width: 100%;
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
