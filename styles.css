@@ -115,6 +115,7 @@ body::after {
 
 /* Global gradient scrim overlay - sits above background, below content */
 html::before {
+  display: none !important;
   content: '';
   position: fixed;
   inset: 0;
@@ -159,7 +160,8 @@ img {
 main {
   display: flex;
   flex-direction: column;
-  gap: 125px;
+  gap: 0;
+  background: #06133B;
   /* Remove top gap so the hero sits flush under the sticky nav */
   padding: 0 0 140px;
   width: 100%;
@@ -269,7 +271,7 @@ main > .secure-network-hero + .band--no-frame {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 22px 40px; /* taller nav */
+  padding: 14px 40px; /* taller nav */
   background: #020713;
   border-bottom: none;
   /* remove edge so nav blends seamlessly into hero */
@@ -290,7 +292,7 @@ main > .secure-network-hero + .band--no-frame {
 }
 
 .nav__logo-img {
-  height: 36px; /* keep logo proportional in taller nav */
+  height: 90px; /* keep logo proportional in taller nav */
   width: auto;
   display: block;
   object-fit: contain;
@@ -399,7 +401,7 @@ main > .secure-network-hero + .band--no-frame {
   padding: 8px 12px;
   border-radius: 8px;
   color: rgba(255, 255, 255, 0.9);
-  font-size: 14px;
+  font-size: clamp(16px, 1.8vw, 22px);
   font-weight: 500;
   transition: all 0.2s ease;
   display: flex;
@@ -444,14 +446,14 @@ main > .secure-network-hero + .band--no-frame {
   top: 100%;
   left: 0;
   width: fit-content;
-  min-width: auto;
+  min-width: 320px;
   background: #06133B;
   border: 1px solid rgba(0, 229, 255, 0.4);
   border-radius: 12px;
   box-shadow: 
     0 8px 32px rgba(0, 0, 0, 0.4),
     0 0 0 1px rgba(0, 229, 255, 0.3);
-  padding: 12px;
+  padding: 24px;
   z-index: 30;
   margin-top: 8px;
 }
@@ -471,7 +473,7 @@ main > .secure-network-hero + .band--no-frame {
 .nav__item--has-sub .nav__sub:hover {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 10px;
   animation: fadeInDown 0.2s ease-out;
 }
 
@@ -512,10 +514,10 @@ main > .secure-network-hero + .band--no-frame {
 }
 
 .nav__sub a {
-  padding: 12px 20px;
+  padding: 18px 32px;
   border-radius: 8px;
   color: rgba(255, 255, 255, 0.9);
-  font-size: 18px !important;
+  font-size: 24px !important;
   font-weight: 500;
   transition: all 0.2s ease;
   display: block;
@@ -603,6 +605,7 @@ main > .secure-network-hero + .band--no-frame {
 
 .hero__lead {
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
   max-width: 900px;
   font-size: clamp(18px, 2.2vw, 26px);
   line-height: 1.5;
@@ -637,6 +640,7 @@ main > .secure-network-hero + .band--no-frame {
   gap: 12px;
   margin-top: 12px;
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
 }
 
 .hero__metrics strong {
@@ -827,11 +831,11 @@ main > .secure-network-hero + .band--no-frame {
     margin: 32px 0;
   }
   .divider-band__title {
-    font-size: 14px;
+    font-size: clamp(16px, 1.8vw, 22px);
     letter-spacing: 0.16em;
   }
   .divider-band__subtitle {
-    font-size: 14px;
+    font-size: clamp(16px, 1.8vw, 22px);
     margin-bottom: 30px;
   }
   .divider-band__items {
@@ -858,7 +862,9 @@ main > .secure-network-hero + .band--no-frame {
 }
 
 #resources.band {
-  background: transparent !important;
+  background: #06133B !important;
+  z-index: 1;
+  isolation: isolate;
   border: none !important;
   box-shadow: none !important;
   padding: 60px 2.5% !important;
@@ -1044,10 +1050,11 @@ main > .secure-network-hero + .band--no-frame {
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 12px;
+  font-size: clamp(16px, 1.8vw, 22px);
 }
 
 .dpp-icon-module__text {
-  font-size: 14px;
+  font-size: clamp(16px, 1.8vw, 22px);
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.6);
 }
@@ -1149,6 +1156,7 @@ main > .secure-network-hero + .band--no-frame {
   font-size: 18px;
   line-height: 1.7;
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
   margin: 0;
   max-width: 600px;
 }
@@ -1206,6 +1214,7 @@ main > .secure-network-hero + .band--no-frame {
   font-size: 15px;
   line-height: 1.6;
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
   margin: 0;
 }
 
@@ -1385,6 +1394,7 @@ main > .secure-network-hero + .band--no-frame {
 
 .band__header .lede {
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
   max-width: 1000px;
   font-size: 18px;
   line-height: 1.7;
@@ -1528,12 +1538,14 @@ main > .secure-network-hero + .band--no-frame {
 .lede,
 .band__header p {
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
 }
 
 .card ul {
   padding-left: 16px;
   margin: 12px 0 0;
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
   display: grid;
   gap: 6px;
 }
@@ -1551,7 +1563,8 @@ main > .secure-network-hero + .band--no-frame {
   align-items: center;
   justify-content: center;
   color: var(--text-subtle);
-  font-size: 14px;
+  font-size: clamp(16px, 1.8vw, 22px);
+  font-size: clamp(16px, 1.8vw, 22px);
 }
 
 .image-placeholder::before {
@@ -1628,6 +1641,7 @@ main > .secure-network-hero + .band--no-frame {
     0 2px 8px rgba(0, 0, 0, 0.2),
     0 0 0 1px rgba(59, 130, 246, 0.2);
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
 }
 
 .chip {
@@ -1640,7 +1654,7 @@ main > .secure-network-hero + .band--no-frame {
   color: var(--text);
   border: 1px solid rgba(59, 130, 246, 0.4);
   font-weight: 600;
-  font-size: 14px;
+  font-size: clamp(16px, 1.8vw, 22px);
   transition: background 0.2s ease, border-color 0.2s ease;
 }
 
@@ -1750,6 +1764,7 @@ main > .secure-network-hero + .band--no-frame {
   letter-spacing: 0.08em;
   width: fit-content;
   margin-bottom: 12px;
+  font-size: clamp(16px, 1.8vw, 22px);
 }
 
 .cards--news .card > *:not(:first-child) {
@@ -1781,12 +1796,13 @@ main > .secure-network-hero + .band--no-frame {
 .cards--news .card p {
   margin: 0 0 13px;
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
   line-height: 1.5;
   font-size: 17px;
 }
 
 .news-card__date {
-  font-size: 14px;
+  font-size: clamp(16px, 1.8vw, 22px);
   color: var(--accent-light);
   font-weight: 400;
   opacity: 1;
@@ -1803,6 +1819,7 @@ main > .secure-network-hero + .band--no-frame {
   grid-column: 1 / -1;
   text-align: center;
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
   padding: 40px;
 }
 
@@ -1946,6 +1963,7 @@ main > .secure-network-hero + .band--no-frame {
   margin: 0 0 20px;
   font-weight: 400;
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
   white-space: nowrap;
 }
 
@@ -2347,6 +2365,7 @@ main > .secure-network-hero + .band--no-frame {
   font-size: 20px;
   line-height: 1.7;
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
   margin: 0 0 20px;
   max-width: 600px;
 }
@@ -2355,6 +2374,7 @@ main > .secure-network-hero + .band--no-frame {
   padding-left: 0;
   margin: 0 0 40px;
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
   display: grid;
   gap: 16px;
   font-size: 18px;
@@ -2416,9 +2436,9 @@ main > .secure-network-hero + .band--no-frame {
   border-radius: 10px;
   font-weight: 700;
   padding: 10px 24px !important;
-  font-size: 18px !important;
+  font-size: 24px !important;
   transition: background 0.2s ease;
-  min-width: auto;
+  min-width: 320px;
 }
 
 .btn--platform:hover {
@@ -2719,7 +2739,7 @@ main > .secure-network-hero + .band--no-frame {
   top: -32px;
   color: #60a5fa;
   display: inline-block;
-  font-size: 14px;
+  font-size: clamp(16px, 1.8vw, 22px);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -2819,11 +2839,13 @@ main > .secure-network-hero + .band--no-frame {
 .back-link {
   display: inline-block;
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
   margin-bottom: 32px;
   font-weight: 500;
   text-decoration: none;
   transition: color 0.2s ease;
-  font-size: 14px;
+  font-size: clamp(16px, 1.8vw, 22px);
+  font-size: clamp(16px, 1.8vw, 22px);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -2844,6 +2866,7 @@ main > .secure-network-hero + .band--no-frame {
 .page-hero__lead {
   font-size: clamp(20px, 2.5vw, 28px);
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
   line-height: 1.5;
   max-width: 800px;
   margin: 0 auto;
@@ -3156,6 +3179,7 @@ main > .secure-network-hero + .band--no-frame {
 
 .feature-item h3 {
   margin-bottom: 12px;
+  font-size: clamp(16px, 1.8vw, 22px);
   font-size: clamp(20px, 2.2vw, 26px);
   max-width: 80%;
 }
@@ -3184,6 +3208,7 @@ main > .secure-network-hero + .band--no-frame {
   line-height: 1.2;
   letter-spacing: normal;
   margin-bottom: 12px;
+  font-size: clamp(16px, 1.8vw, 22px);
   color: #2d3748 !important;
 }
 
@@ -3235,6 +3260,7 @@ main > .secure-network-hero + .band--no-frame {
   font-size: 13px;
   font-weight: 500;
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
   margin-bottom: 6px;
   letter-spacing: 0.3px;
   text-transform: uppercase;
@@ -3245,7 +3271,7 @@ main > .secure-network-hero + .band--no-frame {
   color: var(--accent-light);
   font-weight: 700;
   margin-left: 3px;
-  font-size: 14px;
+  font-size: clamp(16px, 1.8vw, 22px);
   display: inline-block;
 }
 
@@ -3342,6 +3368,7 @@ main > .secure-network-hero + .band--no-frame {
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
   opacity: 0.6;
 }
 
@@ -3364,6 +3391,7 @@ main > .secure-network-hero + .band--no-frame {
   cursor: pointer;
   font-size: 13px;
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
   line-height: 1.6;
   padding: 12px 0;
 }
@@ -3486,6 +3514,7 @@ main > .secure-network-hero + .band--no-frame {
 .error-modal__message {
   font-size: 16px;
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
   line-height: 1.6;
   margin: 0 0 32px;
 }
@@ -3522,6 +3551,7 @@ main > .secure-network-hero + .band--no-frame {
 .page-content p {
   margin: 0 0 20px;
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
   line-height: 1.7;
   font-size: 16px;
 }
@@ -3828,7 +3858,7 @@ main > .secure-network-hero + .band--no-frame {
 }
 
 .document-label {
-  font-size: 14px;
+  font-size: clamp(16px, 1.8vw, 22px);
   font-weight: 700;
   letter-spacing: 2px;
   opacity: 0.9;
@@ -3846,6 +3876,7 @@ main > .secure-network-hero + .band--no-frame {
   font-size: 11px;
   opacity: 0.85;
   margin-bottom: 12px;
+  font-size: clamp(16px, 1.8vw, 22px);
 }
 
 .document-tag {
@@ -3904,6 +3935,7 @@ main > .secure-network-hero + .band--no-frame {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
   gap: 40px;
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
   border-top: 1px solid var(--border);
 }
 
@@ -3935,7 +3967,7 @@ main > .secure-network-hero + .band--no-frame {
   }
 
   .keypoint p {
-    font-size: 14px;
+    font-size: clamp(16px, 1.8vw, 22px);
   }
 
   .whitepaper-visual {
@@ -3971,7 +4003,7 @@ main > .secure-network-hero + .band--no-frame {
   }
 
   .whitepaper-preview__description {
-    font-size: 14px;
+    font-size: clamp(16px, 1.8vw, 22px);
   }
 
   .document-preview {
@@ -4108,14 +4140,17 @@ main > .secure-network-hero + .band--no-frame {
   font-weight: 500;
   text-decoration: none;
   transition: color 0.2s ease;
+  font-size: clamp(16px, 1.8vw, 22px);
 }
 
 .footer a:hover {
-  color: var(--accent-light);
+  color: #00E5FF;
 }
 
 .footer .eyebrow {
   margin-bottom: 12px;
+  font-size: clamp(16px, 1.8vw, 22px);
+  color: #00E5FF;
 }
 
 .footer__newsletter {
@@ -4123,9 +4158,11 @@ main > .secure-network-hero + .band--no-frame {
 }
 
 .footer__newsletter-desc {
-  font-size: 14px;
+  font-size: clamp(16px, 1.8vw, 22px);
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
   margin-bottom: 12px;
+  font-size: clamp(16px, 1.8vw, 22px);
   line-height: 1.5;
 }
 
@@ -4141,7 +4178,7 @@ main > .secure-network-hero + .band--no-frame {
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.05);
   color: var(--text);
-  font-size: 14px;
+  font-size: clamp(16px, 1.8vw, 22px);
   font-family: inherit;
   transition: all 0.2s ease;
 }
@@ -4155,6 +4192,7 @@ main > .secure-network-hero + .band--no-frame {
 
 .footer__newsletter-input::placeholder {
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
 }
 
 /* Footer Copyright */
@@ -4170,8 +4208,8 @@ main > .secure-network-hero + .band--no-frame {
 
 .footer__copyright p {
   margin: 0;
-  font-size: 14px;
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
   font-weight: 400;
   letter-spacing: 0.01em;
 }
@@ -4241,9 +4279,10 @@ main > .secure-network-hero + .band--no-frame {
 }
 
 .cookie-banner__description {
-  font-size: 14px;
+  font-size: clamp(16px, 1.8vw, 22px);
   margin: 0;
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
   line-height: 1.5;
 }
 
@@ -4258,7 +4297,7 @@ main > .secure-network-hero + .band--no-frame {
   border: 1px solid var(--border);
   color: var(--text);
   padding: 10px 20px;
-  font-size: 14px;
+  font-size: clamp(16px, 1.8vw, 22px);
   font-weight: 500;
 }
 
@@ -4272,7 +4311,7 @@ main > .secure-network-hero + .band--no-frame {
   border: 1px solid var(--accent);
   color: var(--text);
   padding: 10px 20px;
-  font-size: 14px;
+  font-size: clamp(16px, 1.8vw, 22px);
   font-weight: 500;
 }
 
@@ -4408,10 +4447,11 @@ main > .secure-network-hero + .band--no-frame {
 }
 
 .cookie-category__description {
-  font-size: 14px;
+  font-size: clamp(16px, 1.8vw, 22px);
   line-height: 1.5;
   margin: 0;
   color: var(--text-subtle);
+  font-size: clamp(16px, 1.8vw, 22px);
 }
 
 /* Cookie Toggle Switch */
@@ -4478,7 +4518,7 @@ main > .secure-network-hero + .band--no-frame {
   border: 1px solid var(--border);
   color: var(--text);
   padding: 12px 24px;
-  font-size: 14px;
+  font-size: clamp(16px, 1.8vw, 22px);
   font-weight: 500;
   flex: 1;
 }
@@ -4493,7 +4533,7 @@ main > .secure-network-hero + .band--no-frame {
   border: 1px solid var(--accent);
   color: var(--text);
   padding: 12px 24px;
-  font-size: 14px;
+  font-size: clamp(16px, 1.8vw, 22px);
   font-weight: 500;
   flex: 1;
 }
@@ -4534,7 +4574,7 @@ main > .secure-network-hero + .band--no-frame {
 
 .btn--small {
   padding: 10px 20px;
-  font-size: 14px;
+  font-size: clamp(16px, 1.8vw, 22px);
   border-radius: 8px;
 }
 
@@ -4619,7 +4659,7 @@ main > .secure-network-hero + .band--no-frame {
 
   .hero__actions .btn {
     width: 100%;
-    min-width: auto;
+    min-width: 320px;
   }
 }
 
@@ -5429,7 +5469,7 @@ main > .secure-network-hero + .band--no-frame {
 }
 
 .dpp-intro__phone-label {
-  font-size: 14px;
+  font-size: clamp(16px, 1.8vw, 22px);
   font-weight: 600;
   color: #2F3A4A;
   text-align: center;

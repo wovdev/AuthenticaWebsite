@@ -12,8 +12,10 @@ const translations = {
     navWhatIsDPP: "What is a DPP?",
     navDataCarriers: "Data Carriers",
     navBookDemo: "Book a Demo",
+    ctaExploreSolution: "Explore Solution",
     
     // Hero Section
+    heroBrand: "Digital Product Passports,<br>Ready for the EU.",
     heroTagline: "Your Plug-And-Play Solution for Compliance and Trust.",
     heroTitle: "Digital Product Passports, Ready for the EU.",
     heroSubtitle: "Launch EU-compliant Digital Product Passports to meet upcoming regulatory requirements, verify authenticity across the product lifecycle, and unlock compliant, data-driven engagement — from factory to consumer.",
@@ -41,9 +43,9 @@ const translations = {
     // Solutions
     solutionsTitle: "Built for protection, compliance, and engagement.",
     solutionBrandProtection: "Brand Protection",
-    solutionBrandProtectionDesc: "Secure identifiers and tamper-evident tags link physical products to digital truth. Authenticity you can prove.",
+    solutionBrandProtectionDesc: "Protect every product with secure, tamper-evident identifiers that link the physical item to its digital truth—proving authenticity, preventing counterfeiting, and preserving brand trust.",
     solutionEUCompliance: "EU Compliance",
-    solutionEUComplianceDesc: "Designed to meet upcoming EU Digital Product Passport requirements under the ESPR, with structured product data, traceability, and evidence-ready records.",
+    solutionEUComplianceDesc: "Meet EU Digital Product Passport requirements with audit-ready product records to ensure traceability and standardized data",
     solutionCustomerEngagement: "Customer Engagement",
     solutionCustomerEngagementDesc: "Turn every product into a service touchpoint with rewards, content, and programs. Ownership as a channel.",
     
@@ -205,8 +207,10 @@ const translations = {
     navWhatIsDPP: "Cos'è un DPP?",
     navDataCarriers: "Supporti Dati",
     navBookDemo: "Prenota una Demo",
+    ctaExploreSolution: "Esplora le Soluzioni",
     
     // Hero Section
+    heroBrand: "Passaporti Digitali di Prodotto,<br>Pronti per l'UE.",
     heroTagline: "La tua soluzione Plug-And-Play per Conformità e Fiducia.",
     heroTitle: "Passaporti Digitali di Prodotto, Pronti per l'UE.",
     heroSubtitle: "Lancia Passaporti Digitali di Prodotto conformi all'UE per soddisfare i futuri requisiti normativi, verifica l'autenticità lungo tutto il ciclo di vita del prodotto e sblocca un coinvolgimento conforme e basato sui dati — dalla fabbrica al consumatore.",
