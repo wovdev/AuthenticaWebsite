@@ -4117,14 +4117,14 @@ main > .secure-network-hero + .band--no-frame {
 /* Lift logo + cyan subtitle so the subtitle aligns with first footer link row (desktop only) */
 @media (min-width: 769px) {
   .footer__brand {
-    margin-top: -18px;
-    gap: 12px;
+    margin-top: -32px;
+    gap: 16px;
   }
 }
 
 .footer__tagline {
   color: #00E5FF !important;
-  margin-top: -12px; /* Bring it closer to the logo */
+  margin-top: -10px; /* Bring it closer to the logo */
   margin-bottom: 0;
   font-weight: 500;
 }
