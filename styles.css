@@ -221,6 +221,11 @@ main > .business-platform {
   margin-top: -125px; /* Remove gap from previous section */
 }
 
+/* Add breathing room between How It Works cards and the next section title */
+main > #platform.business-platform {
+  margin-top: 0;
+}
+
 main > .secure-network-hero {
   position: relative;
   z-index: 1;
@@ -1978,6 +1983,28 @@ main > .secure-network-hero + .band--no-frame {
   #digital-twin.platform-section {
     margin-top: 0 !important;
     padding-top: 110px !important;
+    position: relative;
+    isolation: isolate;
+    z-index: 5; /* keep How It Works cards above the next overlapped section */
+  }
+
+  /* Move the white→blue split UP so it sits behind the How It Works cards
+     around the 3rd line of copy (desktop). */
+  #digital-twin.platform-section::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 820px;
+    bottom: 0;
+    background: #06133B;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  #digital-twin.platform-section > * {
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -2055,7 +2082,7 @@ main > .secure-network-hero + .band--no-frame {
   max-width: none;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  margin-top: -125px;
+  margin-top: 0;
   padding: 100px 0;
   box-sizing: border-box;
   border: none;
@@ -2362,7 +2389,7 @@ main > .secure-network-hero + .band--no-frame {
 }
 
 #compliance.platform-section {
-  margin-top: -125px; /* remove gap between consecutive full-width sections */
+  margin-top: 0 !important; /* don't overlap FOUNDATION */
 }
 
 #platform3.platform-section,
@@ -5144,7 +5171,7 @@ main > .secure-network-hero + .band--no-frame {
   left: -5%;
   right: -5%;
   /* position it behind the center of the cards */
-  top: 50%;
+  top: 34%;
   transform: translateY(-50%);
   border-top: 5px dashed rgba(0, 229, 255, 0.45);
   z-index: 0;
