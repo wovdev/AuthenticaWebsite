@@ -658,3 +658,103 @@ function updateCopyrightYear() {
 // Initialize copyright year
 updateCopyrightYear();
 
+
+// DPP Scroll-triggered Animation
+function initDPPScrollAnimation() {
+  const container = document.querySelector('.dpp-scroll-container');
+  if (!container) return;
+
+  const steps = document.querySelectorAll('.dpp-scroll-step');
+  const images = document.querySelectorAll('.dpp-scroll-image');
+  const spacer = document.querySelector('.dpp-scroll-spacer');
+  
+  if (steps.length === 0 || images.length === 0) return;
+
+  let currentStep = 0;
+  const totalSteps = steps.length;
+
+  function updateStep(stepIndex) {
+    if (stepIndex < 0 || stepIndex >= totalSteps) return;
+    
+    // Update text steps
+    steps.forEach((step, index) => {
+      step.classList.remove('active', 'next');
+      if (index === stepIndex) {
+        step.classList.add('active');
+      } else if (index === stepIndex + 1) {
+        step.classList.add('next');
+      }
+    });
+
+    // Update images
+    images.forEach((image, index) => {
+      image.classList.remove('active');
+      if (index === stepIndex) {
+        image.classList.add('active');
+      }
+    });
+
+    currentStep = stepIndex;
+  }
+
+  // Scroll event listener for smooth transitions
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const containerRect = container.getBoundingClientRect();
+        const containerTop = containerRect.top;
+        const containerHeight = containerRect.height;
+        const windowHeight = window.innerHeight;
+        
+        if (containerTop < windowHeight && containerTop + containerHeight > 0) {
+          const scrollProgress = Math.max(0, Math.min(1, 
+            (windowHeight - containerTop) / containerHeight
+          ));
+          
+          const newStep = Math.floor(scrollProgress * totalSteps);
+          if (newStep !== currentStep && newStep >= 0 && newStep < totalSteps) {
+            updateStep(newStep);
+          }
+        }
+        
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  // Initialize first step
+  updateStep(0);
+}
+
+// Initialize DPP scroll animation when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initDPPScrollAnimation);
+} else {
+  initDPPScrollAnimation();
+}
+
+// Keep the "applications" section the same height as the platform section
+function syncApplicationsHeight() {
+  const platform = document.getElementById('platform');
+  const applications = document.getElementById('applications');
+  if (!platform || !applications) return;
+
+  const platformHeight = platform.getBoundingClientRect().height;
+  if (!platformHeight) return;
+
+  applications.style.height = `${Math.round(platformHeight)}px`;
+}
+
+let appsResizeRaf = null;
+window.addEventListener('resize', () => {
+  if (appsResizeRaf) cancelAnimationFrame(appsResizeRaf);
+  appsResizeRaf = requestAnimationFrame(syncApplicationsHeight);
+});
+
+// Run after images/fonts settle
+window.addEventListener('load', () => {
+  syncApplicationsHeight();
+  setTimeout(syncApplicationsHeight, 150);
+});

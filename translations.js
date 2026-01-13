@@ -14,8 +14,9 @@ const translations = {
     navBookDemo: "Book a Demo",
     
     // Hero Section
-    heroTitle: "AUTHENTICA.ID keeps every product trustworthy, traceable, and ready for circularity.",
-    heroSubtitle: "Launch compliant DPPs, capture lifecycle events, and turn ownership into engagement— with privacy-first rails and plug-and-play tags.",
+    heroTagline: "Your Plug-And-Play Solution for Compliance and Trust.",
+    heroTitle: "Digital Product Passports, Ready for the EU.",
+    heroSubtitle: "Launch EU-compliant Digital Product Passports to meet upcoming regulatory requirements, verify authenticity across the product lifecycle, and unlock compliant, data-driven engagement — from factory to consumer.",
     
     // DPP Section
     dppTitle: "What is a DPP and why is it important?",
@@ -42,7 +43,7 @@ const translations = {
     solutionBrandProtection: "Brand Protection",
     solutionBrandProtectionDesc: "Secure identifiers and tamper-evident tags link physical products to digital truth. Authenticity you can prove.",
     solutionEUCompliance: "EU Compliance",
-    solutionEUComplianceDesc: "Ready-to-use schemas, evidence exports, and consent-aware data sharing for EU markets. DPP done right.",
+    solutionEUComplianceDesc: "Designed to meet upcoming EU Digital Product Passport requirements under the ESPR, with structured product data, traceability, and evidence-ready records.",
     solutionCustomerEngagement: "Customer Engagement",
     solutionCustomerEngagementDesc: "Turn every product into a service touchpoint with rewards, content, and programs. Ownership as a channel.",
     
@@ -87,6 +88,16 @@ const translations = {
     // CTA
     ctaTitle: "Book a Demo",
     ctaDescription: "See AUTHENTICA.ID live for your products. We tailor onboarding by category and region.",
+    
+    // Use Cases
+    useCasesTitle: "Discover Our Use Cases",
+    useCaseAuthenticityTitle: "Authenticity",
+    useCaseAuthenticityDesc: "Secure identifiers and tamper-evident tags link physical products to digital truth. Verify provenance, materials, and chain of custody at every handoff with a scan-ready Digital Product Passport. Reduce counterfeits, resolve disputes faster, and give customers confidence with evidence they can trust. Each product receives a unique cryptographic identity that cannot be replicated or forged. When customers scan NFC tags or QR codes, they instantly access verified information about origin, materials, manufacturing processes, and previous ownership. This transparency builds trust and enables brands to protect their reputation while giving consumers the proof they need to make confident purchases. The system tracks every transfer, creating an immutable record that serves as legal evidence in disputes.",
+    useCaseComplianceTitle: "Compliance",
+    useCaseComplianceDesc: "Audit-ready product data records designed for EU Digital Product Passport (ESPR) compliance. Standardize the attributes you need (materials, origin, care, certifications) and keep documentation traceable across suppliers and batches. Export evidence on demand, simplify audits, and stay aligned as regulations evolve. Our platform automatically structures data according to ESPR requirements, ensuring every product record includes mandatory fields like environmental impact, recyclability, and supply chain transparency. Suppliers can attest to their contributions directly through the system, creating a verifiable chain of documentation. When regulators request evidence, export comprehensive reports in seconds. The platform stays updated with regulatory changes, so your compliance remains current without manual intervention.",
+    useCaseOwnershipTitle: "Ownership",
+    useCaseOwnershipDesc: "Verified ownership records transform possession into something you can clearly define, transfer, and defend. Each product is associated with a traceable ownership history, anchored to verifiable data and designed to prevent ambiguity or dispute across its lifecycle.",
+    useCaseLearnMore: "Learn more",
     
     // Footer
     footerTagline: "Digital Product Passports that keep products trustworthy and compliant.",
@@ -196,8 +207,9 @@ const translations = {
     navBookDemo: "Prenota una Demo",
     
     // Hero Section
-    heroTitle: "AUTHENTICA.ID rende ogni prodotto affidabile, tracciabile e pronto per la circolarità.",
-    heroSubtitle: "Lancia DPP conformi, cattura eventi del ciclo di vita e trasforma la proprietà in coinvolgimento— con infrastrutture privacy-first e tag plug-and-play.",
+    heroTagline: "La tua soluzione Plug-And-Play per Conformità e Fiducia.",
+    heroTitle: "Passaporti Digitali di Prodotto, Pronti per l'UE.",
+    heroSubtitle: "Lancia Passaporti Digitali di Prodotto conformi all'UE per soddisfare i futuri requisiti normativi, verifica l'autenticità lungo tutto il ciclo di vita del prodotto e sblocca un coinvolgimento conforme e basato sui dati — dalla fabbrica al consumatore.",
     
     // DPP Section
     dppTitle: "Cos'è un DPP e perché è importante?",
@@ -224,7 +236,7 @@ const translations = {
     solutionBrandProtection: "Protezione del Brand",
     solutionBrandProtectionDesc: "Identificatori sicuri e tag a prova di manomissione collegano prodotti fisici alla verità digitale. Autenticità che puoi provare.",
     solutionEUCompliance: "Conformità UE",
-    solutionEUComplianceDesc: "Schema pronti all'uso, esportazioni di prove e condivisione dati consapevole del consenso per i mercati UE. DPP fatto bene.",
+    solutionEUComplianceDesc: "Progettato per soddisfare i futuri requisiti del Passaporto Digitale del Prodotto dell'UE ai sensi dell'ESPR, con dati di prodotto strutturati, tracciabilità e record pronti per le prove.",
     solutionCustomerEngagement: "Coinvolgimento Clienti",
     solutionCustomerEngagementDesc: "Trasforma ogni prodotto in un punto di contatto di servizio con ricompense, contenuti e programmi. Proprietà come canale.",
     
@@ -269,6 +281,16 @@ const translations = {
     // CTA
     ctaTitle: "Prenota una Demo",
     ctaDescription: "Vedi AUTHENTICA.ID dal vivo per i tuoi prodotti. Personalizziamo l'onboarding per categoria e regione.",
+    
+    // Use Cases
+    useCasesTitle: "Scopri i Nostri Casi d'Uso",
+    useCaseAuthenticityTitle: "Autenticità",
+    useCaseAuthenticityDesc: "Identificatori sicuri e tag a prova di manomissione collegano i prodotti fisici alla verità digitale. Verifica provenienza, materiali e catena di custodia a ogni passaggio con un Digital Product Passport pronto alla scansione. Riduci i falsi, risolvi contestazioni più velocemente e dai fiducia ai clienti con prove verificabili. Ogni prodotto riceve un'identità crittografica unica che non può essere replicata o contraffatta. Quando i clienti scansionano tag NFC o codici QR, accedono istantaneamente a informazioni verificate su origine, materiali, processi di produzione e proprietà precedenti. Questa trasparenza costruisce fiducia e consente ai brand di proteggere la propria reputazione mentre danno ai consumatori le prove di cui hanno bisogno per acquisti sicuri. Il sistema traccia ogni trasferimento, creando un record immutabile che serve come prova legale nelle controversie.",
+    useCaseComplianceTitle: "Conformità",
+    useCaseComplianceDesc: "Record di dati di prodotto pronti per l'audit progettati per la conformità al Passaporto Digitale del Prodotto UE (ESPR). Standardizza gli attributi richiesti (materiali, origine, cura, certificazioni) e mantieni la documentazione tracciabile tra fornitori e lotti. Esporta evidenze su richiesta, semplifica gli audit e resta allineato mentre le normative evolvono. La nostra piattaforma struttura automaticamente i dati secondo i requisiti ESPR, assicurando che ogni record di prodotto includa campi obbligatori come impatto ambientale, riciclabilità e trasparenza della catena di fornitura. I fornitori possono attestare i loro contributi direttamente attraverso il sistema, creando una catena verificabile di documentazione. Quando i regolatori richiedono evidenze, esporta report completi in secondi. La piattaforma rimane aggiornata con i cambiamenti normativi, quindi la tua conformità rimane attuale senza intervento manuale.",
+    useCaseOwnershipTitle: "Proprietà",
+    useCaseOwnershipDesc: "Emetti record di proprietà sicuri e verificabili e sblocca il coinvolgimento post-acquisto. Collega ogni articolo a un'identità digitale unica per rendere semplici e dimostrabili trasferimenti, garanzie e servizi. Trasforma ogni scansione in un touchpoint—premi, contenuti esclusivi e loyalty—proteggendo collezionisti e brand. Quando un cliente acquista un prodotto, riceve un certificato digitale di proprietà che prova l'autenticità e abilita trasferimenti senza soluzione di continuità. Questo è particolarmente prezioso per collezionabili, edizioni limitate e articoli di alto valore dove la provenienza conta. I brand possono attivare esperienze personalizzate con ogni scansione—contenuti esclusivi, accesso anticipato a nuove uscite, punti fedeltà o offerte speciali. Il record di proprietà abilita anche il tracciamento della garanzia, lo storico dei servizi e l'autenticazione della rivendita, creando valore continuo sia per i clienti che per i brand molto tempo dopo l'acquisto iniziale.",
+    useCaseLearnMore: "Scopri di più",
     
     // Footer
     footerTagline: "Passaporti Digitali del Prodotto che mantengono i prodotti affidabili e conformi.",
