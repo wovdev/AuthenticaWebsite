@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <body class="page--bp">
     <div class="announcement">
       <div class="announcement__container">
         <div class="announcement__scroll">
@@ -80,21 +80,18 @@
     </header>
 
     <main>
-      <section class="secure-network-hero">
-        <!-- Layer 1 (z-0): Background Visuals -->
-        <div class="secure-network-hero__glow"></div>
-        <div class="secure-network-hero__network"></div>
-        
-        <!-- Layer 3 (z-10): Foreground Content -->
-        <div class="secure-network-hero__content">
-          <p class="secure-network-hero__label">Solutions</p>
-          <h1>Defend Your Brand's<br><span class="gradient-text">Digital & Physical Integrity.</span></h1>
-          <p class="secure-network-hero__subheadline">
-            Stop counterfeiting and secure your supply chain with immutable Digital Product Passports. Verify authenticity from factory to consumer. Protect your brand reputation and build consumer trust through transparent, verifiable product information that ensures every product is traceable and compliant.
+      <section class="hero hero--bp" id="home">
+        <div class="hero__content">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span style="display: inline-block; width: 2px; height: 1.1em; background: #00E5FF; border-radius: 2px;"></span>
+            <span style="color: #00E5FF; font-size: clamp(16px, 1.8vw, 22px); font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; line-height: 1;">Brand Protection</span>
+          </div>
+          <h1 class="hero__brand" data-i18n="heroBrand">Digital Product Passports,<br>Ready for the EU.</h1>
+          <p class="hero__lead" data-i18n="heroSubtitle">
+            Launch EU-compliant Digital Product Passports to meet upcoming regulatory requirements, verify authenticity across the product lifecycle, and unlock compliant, data-driven engagement — from factory to consumer.
           </p>
-          <div class="secure-network-hero__actions">
-            <a class="btn btn--primary" href="book-demo.html">Start Protecting</a>
-            <a class="btn btn--secondary" href="#learn-more">See How It Works</a>
+          <div class="hero__actions">
+            <a class="btn" href="book-demo.html" data-i18n="navBookDemo">Book a Demo</a>
           </div>
         </div>
       </section>

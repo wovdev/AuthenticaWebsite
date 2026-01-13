@@ -177,10 +177,38 @@ main > * {
   box-sizing: border-box;
 }
 
-main > #solutions-2 {
-  max-width: none;
+/* Brand Protection page: sections should use full available screen width */
+.page--bp main > * {
+  max-width: 100vw;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   padding-left: 0;
   padding-right: 0;
+}
+
+main > #solutions-2 {
+  padding: 30px 0 125px;
+  background: #ffffff !important;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-bottom: -60px;
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+}
+
+#solutions-2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 480px; /* Adjust height to cover the top dark part */
+  background: #06133B;
+  z-index: -1;
 }
 
 main > .business-platform {
@@ -571,6 +599,12 @@ main > .secure-network-hero + .band--no-frame {
   pointer-events: none;
 }
 
+/* Brand Protection page: taller hero so we can add more copy (homepage unchanged) */
+.hero.hero--bp {
+  min-height: 84vh;
+  padding: 56px 2% 56px;
+}
+
 .hero__content,
 .hero__visual {
   position: relative;
@@ -865,6 +899,10 @@ main > .secure-network-hero + .band--no-frame {
   background: #06133B !important;
   z-index: 1;
   isolation: isolate;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
   border: none !important;
   box-shadow: none !important;
   padding: 60px 2.5% !important;
@@ -892,6 +930,7 @@ main > .secure-network-hero + .band--no-frame {
 #resources .band__header {
   margin-left: 0 !important;
   margin-right: 0 !important;
+  text-align: center;
 }
 
 #resources.band::before {
@@ -4075,6 +4114,22 @@ main > .secure-network-hero + .band--no-frame {
   gap: 16px;
 }
 
+/* Lift logo + cyan subtitle so the subtitle aligns with first footer link row (desktop only) */
+@media (min-width: 769px) {
+  .footer__brand {
+    margin-top: -18px;
+    gap: 12px;
+  }
+}
+
+.footer__tagline {
+  color: #00E5FF !important;
+  margin-top: -12px; /* Bring it closer to the logo */
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+
 .footer__social {
   display: flex;
   gap: 12px;
@@ -4776,6 +4831,7 @@ main > .secure-network-hero + .band--no-frame {
 
 .business-platform__header {
   text-align: center;
+  margin-bottom: 56px;
 }
 
 .business-platform__header h2 {
@@ -4783,10 +4839,21 @@ main > .secure-network-hero + .band--no-frame {
   color: #ffffff;
   font-size: clamp(28px, 3.5vw, 42px);
   font-weight: 600;
-  margin: 0 auto 80px;
+  margin: 8px auto 24px;
   max-width: 1600px;
   padding: 0 40px;
   line-height: 1.2;
+}
+
+/* Use Cases subtitle: match “Implementing a Digital Product Passport…” typography */
+.business-platform__header .use-cases__subtitle {
+  font-size: clamp(18px, 2.2vw, 26px);
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text-subtle);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 .business-platform__subtitle {
@@ -5022,10 +5089,23 @@ main > .secure-network-hero + .band--no-frame {
 /* SaaS Solutions Section */
 #solutions-2 {
   padding: 30px 0 125px;
-  /* Split background: move blue→white transition higher (more white under the cards) */
-  background: linear-gradient(to bottom, #06133B 55%, #ffffff 55%);
+  background: #ffffff !important;
   width: 100%;
   margin-bottom: -125px;
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+}
+
+#solutions-2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 480px; /* Adjust height to cover the top dark part */
+  background: #06133B;
+  z-index: -1;
 }
 
 /* How It Works cards (match reference layout) */
