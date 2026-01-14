@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <body class="page--bp">
     <div class="announcement">
       <div class="announcement__container">
         <div class="announcement__scroll">
@@ -80,73 +80,124 @@
     </header>
 
     <main>
-      <section class="secure-network-hero">
-        <!-- Layer 1 (z-0): Background Visuals -->
-        <div class="secure-network-hero__glow"></div>
-        <div class="secure-network-hero__network"></div>
-        
-        <!-- Layer 3 (z-10): Foreground Content -->
-        <div class="secure-network-hero__content">
-          <a href="index.html" class="back-link">← Back to Home</a>
-          <h1>EU Compliance <span class="gradient-text">Made Simple.</span></h1>
-          <p class="secure-network-hero__subheadline">
-            Ready-to-use schemas, evidence exports, and consent-aware data sharing for EU markets. DPP done right.
+      <section class="hero hero--bp" id="home">
+        <div class="hero__content">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <span style="display: inline-block; width: 2px; height: 1.1em; background: #00E5FF; border-radius: 2px;"></span>
+            <span style="color: #00E5FF; font-size: clamp(16px, 1.8vw, 22px); font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; line-height: 1;">EU Compliance</span>
+          </div>
+          <h1 class="hero__brand" data-i18n="bpHeroBrand">Compliance,<br />Built Into the Product.</h1>
+          <p class="hero__lead" data-i18n="bpHeroSubtitle">
+            Meet EU Digital Product Passport requirements with structured, audit-ready product records designed to persist over time. Centralize product data, ensure traceability, and maintain verifiable documentation across the entire lifecycle—so compliance is enforced by design, not managed manually.
           </p>
-          <div class="secure-network-hero__actions">
-            <a class="btn btn--primary" href="book-demo.html">Start Complying</a>
-            <a class="btn btn--secondary" href="#learn-more">See How It Works</a>
+          <div class="hero__actions">
+            <a class="btn" href="book-demo.html" data-i18n="navBookDemo">Book a Demo</a>
           </div>
         </div>
       </section>
 
       <section class="band band--no-frame">
         <div class="page-content">
-          <h2>Ensuring EU Compliance with Digital Product Passports</h2>
-          
-          <div class="features-section-title" style="visibility: hidden; pointer-events: none;"></div>
-          
-          <div class="features-grid">
-            <div class="feature-item">
-              <h3>Mandatory Data Requirements</h3>
-              <p>
-                All textile products must include comprehensive lifecycle data including materials, manufacturing processes, and environmental impact information.
-              </p>
+          <div style="text-align: center; margin-bottom: 56px;">
+            <div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-bottom: 12px;">
+              <span style="display: inline-block; width: 2px; height: 1.1em; background: #00E5FF; border-radius: 2px;"></span>
+              <span style="color: #1C2B4A; font-size: clamp(16px, 1.8vw, 22px); font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; line-height: 1;">DIGITAL PRODUCT PASSPORTS (DPP)</span>
+            </div>
+            <h2 style="font-size: clamp(36px, 4.5vw, 56px); font-weight: 700; color: #1a1a1a; margin: 8px 0 24px; line-height: 1.2;">EU Compliance, by design.</h2>
+            <p style="font-size: clamp(18px, 2.2vw, 26px); color: #4a4a4a; max-width: 1100px; margin: 0 auto; line-height: 1.5;">Bring DPP-ready product data, verifiable documentation, and lifecycle traceability into one compliance framework.</p>
+              </div>
+          <div class="benefit-cards-grid">
+            <!-- Card 1: Cyan -->
+            <div class="benefit-card benefit-card--cyan">
+              <div class="benefit-card__icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <h3>Standardize Product Data</h3>
+              <p>Ensure product information is captured in a structured, consistent format aligned with EU Digital Product Passport requirements. Standardized data fields reduce fragmentation, simplify validation, and create a reliable foundation for regulatory reporting.</p>
             </div>
             
-            <div class="feature-item">
-              <h3>QR Code Integration</h3>
-              <p>
-                Products must feature accessible data carriers (QR codes or NFC tags) that link to digital passports accessible to consumers, authorities, and supply chain partners.
-              </p>
+            <!-- Card 2: Indigo -->
+            <div class="benefit-card benefit-card--indigo">
+              <div class="benefit-card__icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <h3>Maintain Audit-Ready Records</h3>
+              <p>Keep verifiable documentation accessible at all times through a continuously updated digital record. Every change, update, or lifecycle event is recorded in a way that supports audits, inspections, and regulatory reviews without retroactive reconstruction.</p>
             </div>
             
-            <div class="feature-item">
-              <h3>Compliance Timeline</h3>
-              <p>
-                Regulations phase in starting 2027, with full enforcement by 2030. Early adoption ensures smoother transition and competitive advantage.
-              </p>
+            <!-- Card 3: Blue -->
+            <div class="benefit-card benefit-card--blue">
+              <div class="benefit-card__icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+              </div>
+              <h3>Enable End-to-End Traceability</h3>
+              <p>Track products across manufacturing, distribution, ownership, and end-of-life. Full traceability supports transparency obligations, sustainability reporting, and long-term compliance as EU regulations evolve.</p>
+            </div>
+              </div>
             </div>
             
-            <div class="feature-item">
-              <h3>Evidence Exports</h3>
-              <p>
-                Generate comprehensive compliance reports and evidence exports that meet EU regulatory requirements for audits and verification.
-              </p>
+      </section>
+
+      <section class="platform-section" id="foundation" style="background: #ffffff; width: 100vw; max-width: none; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); padding: 100px 0;">
+        <div class="dpp-content" style="align-items: center; margin-top: 48px;">
+          <div class="dpp-content-left">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+              <span style="display: inline-block; width: 2px; height: 1.1em; background: #00E5FF; border-radius: 2px;"></span>
+              <span style="color: #1C2B4A; font-size: clamp(16px, 1.8vw, 22px); font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; line-height: 1;">BUILT FOR THE DPP</span>
+              </div>
+            <h2 class="dpp-content-title" style="font-size: clamp(36px, 4.5vw, 56px); font-weight: 700; color: #1a1a1a; margin: 8px 0 24px; line-height: 1.2;">From Regulation<br />to Infrastructure.</h2>
+            <p class="dpp-content-subtitle" style="font-size: clamp(18px, 2.2vw, 26px); color: #4a4a4a; max-width: 1100px; margin: 0 auto 24px; line-height: 1.5;">
+              The EU Digital Product Passport introduces new obligations around transparency, traceability, and data accessibility. Meeting these requirements at scale requires more than documentation—it requires a system designed to capture, store, and surface compliant product data over time.
+              <br /><br />
+              WoV Labs provides the infrastructure layer that turns regulatory requirements into operational workflows, ensuring product data remains accurate, verifiable, and aligned with EU expectations throughout the product lifecycle.
+            </p>
+              </div>
+          <div class="dpp-content-right" style="display: flex; align-items: center; justify-content: center; height: auto;">
+            <div class="dpp-placeholder-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); width: 100%; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; color: white; font-size: 22px; border-radius: 20px; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);">
+              MacBook Placeholder
             </div>
-            
-            <div class="feature-item">
-              <h3>Consent-Aware Data Sharing</h3>
-              <p>
-                Implement privacy-compliant data sharing mechanisms that respect consumer consent while meeting regulatory data access requirements.
-              </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="platform-section" id="compliance">
+        <div class="dpp-content" style="align-items: center; margin-top: 140px;">
+          <div class="dpp-content-left" style="display: flex; align-items: center; justify-content: center;">
+            <div class="dpp-placeholder-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); width: 100%; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; color: white; font-size: 22px; border-radius: 20px; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);">
+              Compliance-ready DPP record
             </div>
-            
-            <div class="feature-item">
-              <h3>Ready-to-Use Schemas</h3>
-              <p>
-                Leverage pre-built schemas and templates that align with EU Digital Product Passport standards, reducing implementation time and complexity.
-              </p>
-            </div>
+          </div>
+          <div class="dpp-content-right">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+              <span style="display: inline-block; width: 2px; height: 1.1em; background: #00E5FF; border-radius: 2px;"></span>
+              <span style="color: #1C2B4A; font-size: clamp(16px, 1.8vw, 22px); font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; line-height: 1;">OPERATIONAL IMPACT</span>
+          </div>
+            <h2 class="dpp-content-title" style="font-size: clamp(36px, 4.5vw, 56px); font-weight: 700; color: #1a1a1a; margin: 8px 0 24px; line-height: 1.2;">Reduce Risk.<br />Simplify Compliance.</h2>
+            <p class="dpp-content-subtitle" style="font-size: clamp(18px, 2.2vw, 26px); color: #4a4a4a; margin: 0 0 24px; line-height: 1.5; max-width: 95%;">Manual compliance processes increase operational risk, introduce inconsistencies, and create dependency on fragmented data sources. By anchoring product information to a single, tamper-resistant digital record, compliance becomes repeatable, auditable, and easier to manage across teams and markets.<br /><br />The result is faster audits, clearer reporting, and reduced exposure to regulatory gaps—without adding complexity to existing product workflows.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta" id="bookdemo" aria-label="Book a demo">
+        <div class="cta__content">
+          <div class="cta__text">
+            <h2>Book a Demo</h2>
+            <p>
+              See how Wov Labs helps you launch EU-ready Digital Product Passports, prove authenticity, and turn product data into trusted experiences—end to end.
+            </p>
+          </div>
+          <div class="cta__actions" style="justify-content: center;">
+            <a class="btn btn--cta" href="book-demo.html">Book a Demo</a>
+            <a class="btn btn--secondary" href="https://app.wovlabs.com/" target="_blank" rel="noopener noreferrer">Launch App</a>
           </div>
         </div>
       </section>
@@ -158,11 +209,11 @@
         <a href="index.html" class="nav__logo">
           <img src="./logo.png" alt="AUTHENTICA.ID" class="nav__logo-img" />
         </a>
-        <p data-i18n="footerTagline">Digital Product Passports that keep products trustworthy and compliant.</p>
+        <p class="footer__tagline">Your Plug-And-Play Solution for Compliance and Trust.</p>
         <div class="footer__social">
           <a href="https://www.linkedin.com/company/wovlabs/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
             </svg>
           </a>
           <a href="https://x.com/wovlabs_com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
@@ -182,15 +233,15 @@
       <div class="footer__links">
         <div>
           <p class="eyebrow" data-i18n="footerExplore">Explore</p>
-          <a href="index.html#platform" data-i18n="navPlatform">Platform</a>
-          <a href="index.html#solutions" data-i18n="navSolutions">Solutions</a>
+          <a href="#platform" data-i18n="navPlatform">Platform</a>
+          <a href="#solutions" data-i18n="navSolutions">Solutions</a>
           <a href="sectors.html" data-i18n="navSectors">Sectors</a>
         </div>
         <div>
           <p class="eyebrow" data-i18n="footerLearn">Learn</p>
-          <a href="index.html#dpp" data-i18n="navWhatIsDPP">What is a DPP?</a>
-          <a href="index.html#data-carriers" data-i18n="navDataCarriers">Data Carriers</a>
-          <a href="index.html#resources" data-i18n="navResources">Resources</a>
+          <a href="#dpp" data-i18n="navWhatIsDPP">What is a DPP?</a>
+          <a href="#data-carriers" data-i18n="navDataCarriers">Data Carriers</a>
+          <a href="#resources" data-i18n="navResources">Resources</a>
         </div>
         <div>
           <p class="eyebrow" data-i18n="footerContact">Contact</p>
@@ -198,13 +249,11 @@
           <a href="book-demo.html" data-i18n="navBookDemo">Book a Demo</a>
           <a href="https://app.wovlabs.com/" target="_blank" rel="noopener noreferrer" data-i18n="launchApp">Launch App</a>
         </div>
-        <div class="footer__newsletter">
-          <p class="eyebrow" data-i18n="footerNewsletter">Newsletter</p>
-          <p class="footer__newsletter-desc" data-i18n="footerNewsletterDesc">Stay updated with the latest news and updates.</p>
-          <form class="footer__newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
-            <input type="email" data-i18n-placeholder="footerNewsletterPlaceholder" placeholder="Your email" required class="footer__newsletter-input" />
-            <button type="submit" class="btn btn--small" data-i18n="footerSubscribe">Subscribe</button>
-          </form>
+        <div class="footer__legal">
+          <p class="eyebrow">Legal</p>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="cookie-policy.html">Cookie Policy</a>
         </div>
       </div>
       <div class="footer__copyright">
@@ -307,7 +356,7 @@
       </div>
     </div>
 
-    <script src="./translations.js"></script>
+    <script src="./translations.js?v=20260113-1"></script>
     <script src="./script.js"></script>
   </body>
 </html>
