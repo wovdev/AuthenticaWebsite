@@ -553,7 +553,7 @@ main > .secure-network-hero + .band--no-frame {
   padding: 18px 32px;
   border-radius: 8px;
   color: rgba(255, 255, 255, 0.9);
-  font-size: 24px !important;
+  font-size: clamp(16px, 1.8vw, 22px) !important; /* match main nav text size */
   font-weight: 500;
   transition: all 0.2s ease;
   display: block;
@@ -2747,9 +2747,32 @@ main > .secure-network-hero + .band--no-frame {
 
 .cta__actions {
   display: flex;
-  gap: 10px;
+  gap: 16px;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: center;
+}
+
+.cta__actions .btn:not(.btn--secondary) {
+  padding: 16px 32px;
+  font-size: clamp(16px, 1.8vw, 22px);
+  border-radius: 10px;
+  min-width: 220px;
+  background: #00E5FF;
+  color: #06133B;
+  box-shadow: 0 14px 30px rgba(0, 229, 255, 0.3);
+}
+
+.cta__actions .btn:not(.btn--secondary):hover {
+  background: #00d4ec;
+  transform: translateY(-2px);
+  box-shadow: 0 18px 35px rgba(0, 229, 255, 0.4);
+}
+
+.cta__actions .btn--secondary {
+  padding: 16px 32px;
+  font-size: clamp(16px, 1.8vw, 22px);
+  border-radius: 10px;
+  min-width: 220px;
 }
 
 /* Bottom CTA Banner */
@@ -4841,6 +4864,12 @@ main > .secure-network-hero + .band--no-frame {
     justify-content: center;
   }
 
+  .cta__actions .btn {
+    width: 100%;
+    min-width: 320px;
+    justify-content: center;
+  }
+
   .hero__actions {
     flex-direction: column;
   }
@@ -5767,5 +5796,108 @@ main > .secure-network-hero + .band--no-frame {
   
   .dpp-intro__right {
     order: 3;
+  }
+}
+
+/* Benefit Cards (Light Crayon Style) */
+.benefit-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1680px; /* Reduced by 20% from 2100px */
+}
+
+/* Allow page-content in Brand Protection to expand for wider cards */
+.page--bp .band--no-frame .page-content {
+  max-width: 1680px !important;
+}
+
+.benefit-card {
+  padding: 64px 48px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  height: 100%;
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+}
+
+.benefit-card__icon-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.benefit-card__icon-box svg {
+  width: 40px;
+  height: 40px;
+}
+
+.benefit-card h3 {
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  color: #111827 !important;
+  margin: 0 !important;
+  line-height: 1.2 !important;
+}
+
+.benefit-card p {
+  font-size: clamp(17px, 2vw, 22px) !important;
+  line-height: 1.6 !important;
+  color: #4B5563 !important;
+  margin: 0 !important;
+}
+
+/* Color Variations */
+.benefit-card--cyan {
+  background-color: rgba(0, 229, 255, 0.08);
+}
+.benefit-card--cyan .benefit-card__icon-box {
+  background-color: rgba(0, 229, 255, 0.15);
+  color: #00B8D4;
+}
+
+.benefit-card--indigo {
+  background-color: rgba(99, 102, 241, 0.08);
+}
+.benefit-card--indigo .benefit-card__icon-box {
+  background-color: rgba(99, 102, 241, 0.15);
+  color: #4F46E5;
+}
+
+.benefit-card--blue {
+  background-color: rgba(6, 19, 59, 0.05);
+}
+.benefit-card--blue .benefit-card__icon-box {
+  background-color: rgba(6, 19, 59, 0.1);
+  color: #06133B;
+}
+
+@media (max-width: 992px) {
+  .benefit-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .benefit-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .benefit-card {
+    padding: 32px;
   }
 }
