@@ -5135,7 +5135,7 @@ main > .secure-network-hero + .band--no-frame {
   transform: translate(-50%, -50%);
   width: 150%;
   height: 150%;
-  background-image: url('./wovlabs_dump/images/background-laptop-Photoroom.png');
+  background-image: url('./Images/background-laptop-Photoroom.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
