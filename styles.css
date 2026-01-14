@@ -187,6 +187,11 @@ main > * {
   padding-right: 0;
 }
 
+/* Brand Protection page: avoid the empty dark band at the bottom of main */
+.page--bp main {
+  padding-bottom: 0;
+}
+
 main > #solutions-2 {
   padding: 30px 0 125px;
   background: linear-gradient(180deg, #06133B 480px, #ffffff 480px) !important;
@@ -530,10 +535,6 @@ main > .secure-network-hero + .band--no-frame {
   transition: width 0.3s ease;
 }
 
-.nav__item--has-sub:hover > a::after {
-  width: 100%;
-}
-
 .nav__item--has-sub:hover > a {
   color: var(--accent-light);
 }
@@ -563,7 +564,7 @@ main > .secure-network-hero + .band--no-frame {
 
 .nav__sub a:hover {
   color: #00E5FF;
-  background: rgba(0, 229, 255, 0.1);
+  background: transparent;
 }
 
 .nav__toggle {
@@ -2078,6 +2079,20 @@ main > .secure-network-hero + .band--no-frame {
   box-shadow: none;
   position: relative;
   z-index: 2;
+}
+
+#foundation.platform-section {
+  background: #ffffff !important;
+  width: 100vw !important;
+  max-width: none !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  padding: 100px 0 !important;
+  box-sizing: border-box !important;
+  border: none !important;
+  box-shadow: none !important;
+  position: relative !important;
+  z-index: 2 !important;
 }
 
 #compliance.platform-section {
