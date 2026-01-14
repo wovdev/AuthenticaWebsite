@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+dist/
+build/
+.env
+*.zip
+wovlabs_dump/
+tmp_test.txt
+wovlabs_scrape.py
+fetch_medium_posts.py

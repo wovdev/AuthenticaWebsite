@@ -19,8 +19,9 @@ const translations = {
     heroTagline: "Your Plug-And-Play Solution for Compliance and Trust.",
     heroTitle: "Digital Product Passports, Ready for the EU.",
     heroSubtitle: "Launch EU-compliant Digital Product Passports to meet upcoming regulatory requirements, verify authenticity across the product lifecycle, and unlock compliant, data-driven engagement — from factory to consumer.",
-    bpHeroBrand: "Authenticity You Can Verify.",
-    bpHeroSubtitle: "Verify every product at the source using secure identifiers, smart tags, and blockchain-backed records designed for long-term integrity. Create a tamper-resistant link between the physical item and its digital record, ensuring product data cannot be altered or duplicated without detection. This system is built to prevent manipulation, expose counterfeits, and make authenticity verifiable at every step of the product lifecycle, from manufacturing and distribution to resale and end ownership.",
+    bpHeroBrand: "A Direct Channel
+At the Product Level.",
+    bpHeroSubtitle: "Use Digital Product Passports to activate engagement directly through owned products. Verified ownership and real-world interactions enable content, promotions, and programs that adapt over time, creating a controlled and measurable engagement layer beyond the point of sale.",
     
     // DPP Section
     dppTitle: "What is a DPP and why is it important?",
@@ -216,8 +217,9 @@ const translations = {
     heroTagline: "La tua soluzione Plug-And-Play per Conformità e Fiducia.",
     heroTitle: "Passaporti Digitali di Prodotto, Pronti per l'UE.",
     heroSubtitle: "Lancia Passaporti Digitali di Prodotto conformi all'UE per soddisfare i futuri requisiti normativi, verifica l'autenticità lungo tutto il ciclo di vita del prodotto e sblocca un coinvolgimento conforme e basato sui dati — dalla fabbrica al consumatore.",
-    bpHeroBrand: "Autenticità che puoi verificare.",
-    bpHeroSubtitle: "Verifica ogni prodotto alla fonte utilizzando identificatori sicuri, smart tag e registri supportati da blockchain progettati per l’integrità nel lungo periodo. Crea un collegamento resistente alle manomissioni tra l’articolo fisico e il suo record digitale, garantendo che i dati del prodotto non possano essere alterati o duplicati senza essere rilevati. Questo sistema è progettato per prevenire manipolazioni, smascherare i falsi e rendere l’autenticità verificabile in ogni fase del ciclo di vita del prodotto, dalla produzione e distribuzione fino alla rivendita e alla proprietà finale.",
+    bpHeroBrand: "Un canale diretto
+al livello del prodotto.",
+    bpHeroSubtitle: "Usa i Digital Product Passport per attivare l’engagement direttamente attraverso i prodotti posseduti. Proprietà verificata e interazioni nel mondo reale abilitano contenuti, promozioni e programmi che evolvono nel tempo, creando un livello di engagement controllato e misurabile oltre il punto vendita.",
     
     // DPP Section
     dppTitle: "Cos'è un DPP e perché è importante?",
