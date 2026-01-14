@@ -312,7 +312,8 @@ main > .secure-network-hero + .band--no-frame {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 14px 40px; /* taller nav */
+  /* Match main content gutter so the logo aligns with hero title */
+  padding: 14px 2.5%;
   background: #020713;
   border-bottom: none;
   /* remove edge so nav blends seamlessly into hero */
@@ -5325,7 +5326,7 @@ main > .secure-network-hero + .band--no-frame {
   /* position it behind the center of the cards */
   top: 34%;
   transform: translateY(-50%);
-  border-top: 5px dashed rgba(0, 229, 255, 0.45);
+  border-top: 5px dashed rgba(148, 163, 184, 0.6); /* light grey */
   z-index: 0;
   pointer-events: none;
   /* fade the line into the background at both ends */
